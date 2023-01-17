@@ -1,0 +1,50 @@
+// setMugEntry(UnitMugID, UnitMugData, MouthX, MouthY, EyeX, EyeY)
+#define setMugEntryExtend(mugEntry, mugLocation, mouthX, mouthY, eyeX, eyeY, extend1X, extend1Y, extend2X, extend2Y)"PUSH; ORG PortraitTable+mugEntry*0x1C; POIN mugLocation; POIN mugLocation+0x1624; POIN mugLocation+0x1604; POIN mugLocation+0x1004; BYTE extend1X extend1Y extend2X extend2Y; BYTE mouthX mouthY eyeX eyeY; BYTE 1 0 1 0; POP"
+
+ALIGN 16
+EsmeMugData:
+#incbin "Dmp/Esme_mug.dmp"
+#incbin "Dmp/Esme_frames.dmp"
+#incbin "Dmp/Esme_palette.dmp"
+#incbin "Dmp/Esme_minimug.dmp"
+setMugEntry(EsmeMug, EsmeMugData, 3, 5, 3, 3)
+
+ALIGN 16
+SolominMugData:
+#incbin "Dmp/Solomin_mug.dmp"
+#incbin "Dmp/Solomin_frames.dmp"
+#incbin "Dmp/Solomin_palette.dmp"
+#incbin "Dmp/Solomin_minimug.dmp"
+setMugEntry(SolominMug, SolominMugData, 2, 5, 2, 3)
+
+ALIGN 16
+OlrikMugData:
+#incbin "Dmp/Olrik_mug.dmp"
+#incbin "Dmp/Olrik_frames.dmp"
+#incbin "Dmp/Olrik_palette.dmp"
+#incbin "Dmp/Olrik_minimug.dmp"
+setMugEntry(OldrikMug, OlrikMugData, 3, 5, 3, 3)
+
+ALIGN 16
+GeorgiosMugData:
+#incbin "Dmp/Georgios_mug.dmp"
+#incbin "Dmp/Georgios_frames.dmp"
+#incbin "Dmp/Georgios_palette.dmp"
+#incbin "Dmp/Georgios_minimug.dmp"
+setMugEntry(GeorgiosMug, GeorgiosMugData, 3, 5, 3, 3)
+
+ALIGN 16
+AlastoreMugData:
+#incbin "Dmp/Alastore_mug.dmp"
+#incbin "Dmp/Alastore_frames.dmp"
+#incbin "Dmp/Alastore_palette.dmp"
+#incbin "Dmp/Alastore_minimug.dmp"
+setMugEntry(AlastoreMug, AlastoreMugData, 3, 5, 3, 3)
+
+ALIGN 16
+KorinaMugData:
+#incbin "Dmp/Korina_mug.dmp"
+#incbin "Dmp/Korina_frames.dmp"
+#incbin "Dmp/Korina_palette.dmp"
+#incbin "Dmp/Korina_minimug.dmp"
+setMugEntry(KorinaMug, KorinaMugData, 3, 5, 3, 3)

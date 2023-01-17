@@ -1,0 +1,34 @@
+#include "NewCalculations.lyn.event"
+
+ALIGN 4
+gSkillTester:
+POIN SkillTester+1
+
+ALIGN 4
+gExtra_Growth_Boosts:
+POIN Extra_Growth_Boosts|1
+
+gGetHPGrowth:
+POIN Get_Hp_Growth|1
+
+gGetStrGrowth:
+POIN Get_Str_Growth|1
+
+gGetSklGrowth:
+POIN Get_Skl_Growth|1
+
+gGetSpdGrowth:
+POIN Get_Spd_Growth|1
+
+gGetDefGrowth:
+POIN Get_Def_Growth|1
+
+gGetResGrowth:
+POIN Get_Res_Growth|1
+
+gGetLukGrowth:
+POIN Get_Luk_Growth|1
+
+gGetMagGrowth:
+POIN Get_Mag_Growth|1
+

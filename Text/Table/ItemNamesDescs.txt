@@ -1,0 +1,71 @@
+## BronzeSwordName
+Bronze Sword[X]
+
+## BronzeSwordDesc
+Unable to make critical attacks.[X]
+
+## BronzeLanceName
+Bronze Lance[X]
+
+## RazorEdgeName
+Razor Edge[X]
+
+## RazorLanceName
+Razor Lance[X]
+
+## IronGreatlanceName
+Iron Greatlance[X]
+
+## SteelGreatlanceName
+Steel Greatlance[X]
+
+## BronzeAxeName
+Bronze Axe[X]
+
+## WingclipperName
+Wingclipper[X]
+
+## WingclipperDesc
+Eff. vs fliers.[X]
+
+## RazorAxeName
+Razor Axe[X]
+
+## RazorBowName
+Razor Bow[X]
+
+## BronzeBowName
+Bronze Bow[X]
+
+## IronLongbowName
+Iron Longbow[X]
+
+## SteelLongbowName
+Steel Longbow[X]
+
+## ManakillerName
+Manakiller[X]
+
+## ManakillerDesc
+Eff. vs mages.[X]
+
+## ArcaneBowName
+Arcane Bow[X]
+
+## ArcaneBowDesc
+Magical weapon.[X]
+
+## BreakArcName
+Break Arc[X]
+
+## BreakArcDesc
+Eff. vs armored and horseback foes.[X]
+
+## BraveDesc
+Multiplies attacks dealt by 2.[X]
+
+## IronPoleaxeName
+Iron Poleaxe[X]
+
+## SteelPoleaxeName
+Steel Poleaxe[X]

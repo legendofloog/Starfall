@@ -1,0 +1,17 @@
+//Thracia Castle
+    ALIGN 4
+    Chapter1Object:
+    #incbin "Object/Autumn_Thracia_Mix2.dmp"
+
+    ALIGN 4
+    Chapter1Palette:
+    #incbin "Palette/Autumn_Thracia_Mix2_pal.dmp"
+
+    ALIGN 4
+    Chapter1MapchipConfig:
+    #incbin "Config/new_mapchip_chapter1_comp.dmp"
+
+    EventPointerTable(Chapter1ObjectID,Chapter1Object)
+    EventPointerTable(Chapter1PaletteID,Chapter1Palette)
+    EventPointerTable(Chapter1ConfigID,Chapter1MapchipConfig)
+  

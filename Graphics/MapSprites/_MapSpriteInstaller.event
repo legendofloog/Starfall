@@ -1,0 +1,721 @@
+#include "_MapSpriteDefs.event"
+
+//repoint map sprite tables
+PUSH
+ORG $26730
+POIN StandingMapSpriteTable
+ORG $267B0
+POIN StandingMapSpriteTable
+ORG $26838
+POIN StandingMapSpriteTable
+ORG $26C88
+POIN StandingMapSpriteTable
+ORG $272D0
+POIN StandingMapSpriteTable
+ORG $27BB0
+POIN StandingMapSpriteTable
+ORG $27C9C
+POIN StandingMapSpriteTable
+ORG $27D48
+POIN StandingMapSpriteTable
+ORG $27E0C
+POIN StandingMapSpriteTable
+ORG $27E9C
+POIN StandingMapSpriteTable
+ORG $27F74
+POIN StandingMapSpriteTable
+ORG $28064
+POIN StandingMapSpriteTable
+
+ORG $79584
+POIN MovingMapSpriteTable
+ORG $79598
+POIN MovingMapSpriteTable
+ORG $BAC2C
+POIN MovingMapSpriteTable
+ORG $BAC40
+POIN MovingMapSpriteTable
+POP
+
+ALIGN 4
+StandingMapSpriteTable:
+FILL (256*8)
+
+ALIGN 4
+MovingMapSpriteTable:
+FILL (256*8)
+
+//we need to fill out these tables with the vanilla table contents
+//we'll use dmps because i'm lazy
+
+PUSH
+ORG StandingMapSpriteTable
+#incbin "VanillaStandingMapSpriteTable.dmp"
+ORG MovingMapSpriteTable
+#incbin "VanillaMovingMapSpriteTable.dmp"
+POP
+
+StandingMapSprite(SwordRiderMapSprite,MapSprite16x32,SwordRiderSMS)
+MovingMapSprite(SwordRider, $1C3D7C, SwordRiderMMS)
+
+StandingMapSprite(FreeKnightMapSprite,MapSprite16x32,FreeKnightSMS)
+MovingMapSprite(FreeKnight, $1C3D7C, FreeKnightMMS)
+
+StandingMapSprite(LanceRiderMapSprite,MapSprite16x32,LanceRiderSMS)
+MovingMapSprite(LanceRider, $1C3D7C, LanceRiderMMS)
+
+StandingMapSprite(DukeKnightMapSprite,MapSprite16x32,DukeKnightSMS)
+MovingMapSprite(DukeKnight, $1C3D7C, DukeKnightMMS)
+
+StandingMapSprite(AxeRiderMapSprite,MapSprite16x32,AxeRiderSMS)
+MovingMapSprite(AxeRider, $1C3D7C, AxeRiderMMS)
+
+StandingMapSprite(GreatKnightMapSprite,MapSprite16x32,GreatKnightSMS)
+MovingMapSprite(GreatKnight, $1C3D7C, GreatKnightMMS)
+
+StandingMapSprite(BowRiderMapSprite,MapSprite16x32,BowRiderSMS)
+MovingMapSprite(BowRider, $1C3D7C, BowRiderMMS)
+
+StandingMapSprite(ArchKnightMapSprite,MapSprite16x32,ArchKnightSMS)
+MovingMapSprite(ArchKnight, $1C3D7C, ArchKnightMMS)
+
+StandingMapSprite(PegasusRiderMapSprite,MapSprite16x32,PegasusRiderSMS)
+MovingMapSprite(PegasusRider, $1C3D7C, PegasusRiderMMS)
+
+StandingMapSprite(FalcoknightMapSprite,MapSprite16x32,FalcoknightSMS)
+MovingMapSprite(Falcoknight, $1C3D7C, FalcoknightMMS)
+
+StandingMapSprite(WyvernRiderMapSprite,MapSprite16x32,WyvernRiderSMS)
+MovingMapSprite(WyvernRider, $1C3D7C, WyvernRiderMMS)
+
+StandingMapSprite(DracoknightMapSprite,MapSprite16x32,DracoknightSMS)
+MovingMapSprite(Dracoknight, $1C3D7C, DracoknightMMS)
+
+StandingMapSprite(GoldKnightMapSprite,MapSprite16x32,GoldKnightSMS)
+MovingMapSprite(GoldKnight, $1C3D7C, GoldKnightMMS)
+
+StandingMapSprite(SilverKnightMapSprite,MapSprite16x32,SilverKnightSMS)
+MovingMapSprite(SilverKnight, $1C3D7C, SilverKnightMMS)
+
+StandingMapSprite(RangerMapSprite,MapSprite16x32,RangerSMS)
+MovingMapSprite(Ranger, $1C3D7C, RangerMMS)
+
+StandingMapSprite(MageKnightMapSprite,MapSprite16x32,MageKnightSMS)
+MovingMapSprite(MageKnight, $1C3D7C, MageKnightMMS)
+
+StandingMapSprite(CataphractMapSprite,MapSprite16x32,CataphractSMS)
+MovingMapSprite(Cataphract, $1C3D7C, CataphractMMS)
+
+StandingMapSprite(GriffonKnightMapSprite,MapSprite16x32,GriffonKnightSMS)
+MovingMapSprite(GriffonKnight, $1C3D7C, GriffonKnightMMS)
+
+StandingMapSprite(KinshiKnightMapSprite,MapSprite16x32,KinshiKnightSMS)
+MovingMapSprite(KinshiKnight, $1C3D7C, KinshiKnightMMS)
+
+StandingMapSprite(ScaleguardMapSprite,MapSprite16x32,ScaleguardSMS)
+MovingMapSprite(Scaleguard, $1C3D7C, ScaleguardMMS)
+
+StandingMapSprite(ArmorKnightMapSprite,MapSprite16x32,ArmorKnightSMS)
+MovingMapSprite(ArmorKnight, $1C3D7C, ArmorKnightMMS)
+
+StandingMapSprite(GeneralMapSprite,MapSprite16x32,GeneralSMS)
+MovingMapSprite(General, $1C3D7C, GeneralMMS)
+
+StandingMapSprite(BaronMapSprite,MapSprite32x32,BaronSMS)
+MovingMapSprite(Baron, $1C3D7C, BaronMMS)
+
+StandingMapSprite(SoldierMapSprite,MapSprite16x16,SoldierSMS)
+MovingMapSprite(Soldier, $1C3D7C, SoldierMMS)
+
+StandingMapSprite(MercenaryMapSprite,MapSprite16x16,MercenarySMS)
+MovingMapSprite(Mercenary, $1C3D7C, MercenaryMMS)
+
+StandingMapSprite(FighterMapSprite,MapSprite16x16,FighterSMS)
+MovingMapSprite(Fighter, $1C3D7C, FighterMMS)
+
+StandingMapSprite(MyrmidonMapSprite,MapSprite16x16,MyrmidonSMS)
+MovingMapSprite(Myrmidon, $1C3D7C, MyrmidonMMS)
+
+StandingMapSprite(FreelancerMapSprite,MapSprite16x16,FreelancerSMS)
+MovingMapSprite(Freelancer, $1C3D7C, FreelancerMMS)
+
+StandingMapSprite(BrigandMapSprite,MapSprite16x16,BrigandSMS)
+MovingMapSprite(Brigand, $1C3D7C, BrigandMMS)
+
+StandingMapSprite(HalberdierMapSprite,MapSprite16x16,HalberdierSMS)
+MovingMapSprite(Halberdier, $1C3D7C, HalberdierMMS)
+
+StandingMapSprite(ArcherMapSprite,MapSprite16x16,ArcherSMS)
+MovingMapSprite(Archer, $1C3D7C, ArcherMMS)
+
+StandingMapSprite(HunterMapSprite,MapSprite16x16,HunterSMS)
+MovingMapSprite(Hunter, $1C3D7C, HunterMMS)
+
+StandingMapSprite(ThiefMapSprite,MapSprite16x16,ThiefSMS)
+MovingMapSprite(Thief, $1C3D7C, ThiefMMS)
+
+StandingMapSprite(FireMageMapSprite,MapSprite16x16,FireMageSMS)
+MovingMapSprite(FireMage, $1C3D7C, FireMageMMS)
+
+StandingMapSprite(WindMageMapSprite,MapSprite16x16,WindMageSMS)
+MovingMapSprite(WindMage, $1C3D7C, WindMageMMS)
+
+StandingMapSprite(ThunderMageMapSprite,MapSprite16x16,ThunderMageSMS)
+MovingMapSprite(ThunderMage, $1C3D7C, ThunderMageMMS)
+
+StandingMapSprite(ClericMapSprite,MapSprite16x16,ClericSMS)
+MovingMapSprite(Cleric, $1C3D7C, ClericMMS)
+
+StandingMapSprite(HalberdierMapSprite,MapSprite16x32,HalberdierSMS)
+MovingMapSprite(Halberdier, $1C3D7C, HalberdierMMS)
+
+StandingMapSprite(HeroMapSprite,MapSprite16x16,HeroSMS)
+MovingMapSprite(Hero, $1C3D7C, HeroMMS)
+
+StandingMapSprite(WarriorMapSprite,MapSprite16x32,WarriorSMS)
+MovingMapSprite(Warrior, $1C3D7C, WarriorMMS)
+
+StandingMapSprite(SwordmasterMapSprite,MapSprite16x16,SwordmasterSMS)
+MovingMapSprite(Swordmaster, $1C3D7C, SwordmasterMMS)
+
+StandingMapSprite(RavagerMapSprite,MapSprite16x32,RavagerSMS)
+MovingMapSprite(Ravager, $1C3D7C, RavagerMMS)
+
+StandingMapSprite(BerserkerMapSprite,MapSprite16x32,BerserkerSMS)
+MovingMapSprite(Berserker, $1C3D7C, BerserkerMMS)
+
+StandingMapSprite(SniperMapSprite,MapSprite16x16,SniperSMS)
+MovingMapSprite(Sniper, $1C3D7C, SniperMMS)
+
+StandingMapSprite(AssassinMapSprite,MapSprite16x16,AssassinSMS)
+MovingMapSprite(Assassin, $1C3D7C, AssassinMMS)
+
+StandingMapSprite(FireSageMapSprite,MapSprite16x16,FireSageSMS)
+MovingMapSprite(FireSage, $1C3D7C, FireSageMMS)
+
+StandingMapSprite(WindSageMapSprite,MapSprite16x16,WindSageSMS)
+MovingMapSprite(WindSage, $1C3D7C, WindSageMMS)
+
+StandingMapSprite(ThunderSageMapSprite,MapSprite16x16,ThunderSageSMS)
+MovingMapSprite(ThunderSage, $1C3D7C, ThunderSageMMS)
+
+StandingMapSprite(BishopMapSprite,MapSprite16x16,BishopSMS)
+MovingMapSprite(Bishop, $1C3D7C, BishopMMS)
+
+StandingMapSprite(GladiatorMapSprite,MapSprite16x32,GladiatorSMS)
+MovingMapSprite(Gladiator, $1C3D7C, GladiatorMMS)
+
+StandingMapSprite(WarMonkMapSprite,MapSprite16x32,WarMonkSMS)
+MovingMapSprite(WarMonk, $1C3D7C, WarMonkMMS)
+
+StandingMapSprite(SlayerMapSprite,MapSprite16x16,SlayerSMS)
+MovingMapSprite(Slayer, $1C3D7C, SlayerMMS)
+
+StandingMapSprite(DragoonMapSprite,MapSprite16x32,DragoonSMS)
+MovingMapSprite(Dragoon, $1C3D7C, DragoonMMS)
+
+StandingMapSprite(HarbingerMapSprite,MapSprite16x32,HarbingerSMS)
+MovingMapSprite(Harbinger, $1C3D7C, HarbingerMMS)
+
+StandingMapSprite(AdventurerMapSprite,MapSprite16x16,AdventurerSMS)
+MovingMapSprite(Adventurer, $1C3D7C, AdventurerMMS)
+
+StandingMapSprite(BallisticianMapSprite,MapSprite16x32,BallisticianSMS)
+MovingMapSprite(Ballistician, $1C3D7C, BallisticianMMS)
+
+StandingMapSprite(TricksterMapSprite,MapSprite16x16,TricksterSMS)
+MovingMapSprite(Trickster, $1C3D7C, TricksterMMS)
+
+StandingMapSprite(GrassrunnerMapSprite,MapSprite16x32,GrassrunnerSMS)
+MovingMapSprite(Grassrunner, $1C3D7C, GrassrunnerMMS)
+
+StandingMapSprite(LordMapSprite,MapSprite16x32,LordSMS)
+MovingMapSprite(Lord, $1C3D7C, LordMMS)
+
+StandingMapSprite(KnightLordMapSprite,MapSprite16x32,KnightLordSMS)
+MovingMapSprite(KnightLord, $1C3D7C, KnightLordMMS)
+
+StandingMapSprite(RogueMapSprite,MapSprite16x16,RogueSMS)
+MovingMapSprite(Rogue, $1C3D7C, RogueMMS)
+
+
+
+ALIGN 4
+SwordRiderSMS:
+#incbin "Dmp/Cavalier (M) Sword {SALVAGED}-stand.dmp"
+
+ALIGN 4
+SwordRiderMMS:
+#incbin "Dmp/Cavalier (M) Sword {SALVAGED}-move.dmp"
+
+ALIGN 4
+FreeKnightSMS:
+#incbin "Dmp/Paladin (M) v2 Sword {RobertFPY}-stand.dmp"
+
+ALIGN 4
+FreeKnightMMS:
+#incbin "Dmp/Paladin (M) v2 Sword {RobertFPY}-move.dmp"
+
+ALIGN 4
+LanceRiderSMS:
+#incbin "Dmp/Cavalier (M) Lance {SALVAGED}-stand.dmp"
+
+ALIGN 4
+LanceRiderMMS:
+#incbin "Dmp/Cavalier (M) Lance {SALVAGED}-move.dmp"
+
+ALIGN 4
+DukeKnightSMS:
+#incbin "Dmp/Paladin (M) Lance {IS}-stand.dmp"
+
+ALIGN 4
+DukeKnightMMS:
+#incbin "Dmp/Paladin (M) Lance {IS}-move.dmp"
+
+ALIGN 4
+AxeRiderSMS:
+#incbin "Dmp/Cavalier (M) Axe {SALVAGED}-stand.dmp"
+
+ALIGN 4
+AxeRiderMMS:
+#incbin "Dmp/Cavalier (M) Axe {SALVAGED}-move.dmp"
+
+ALIGN 4
+GreatKnightSMS:
+#incbin "Dmp/Paladin (M) v2 Axe {RobertFPY}-stand.dmp"
+
+ALIGN 4
+GreatKnightMMS:
+#incbin "Dmp/Paladin (M) v2 Axe {RobertFPY}-move.dmp"
+
+ALIGN 4
+BowRiderSMS:
+#incbin "Dmp/Cavalier (M) Bow {flasuban}-stand.dmp"
+
+ALIGN 4
+BowRiderMMS:
+#incbin "Dmp/Cavalier (M) Bow {flasuban}-walk.dmp"
+
+ALIGN 4
+ArchKnightSMS:
+#incbin "Dmp/Paladin (M) Bow {Leif}-stand.dmp"
+
+ALIGN 4
+ArchKnightMMS:
+#incbin "Dmp/Paladin (M) Bow {Leif}-walk.dmp"
+
+ALIGN 4
+PegasusRiderSMS:
+#incbin "Dmp/Pegasi (F) T1 Lance {IS}-stand.dmp"
+
+ALIGN 4
+PegasusRiderMMS:
+#incbin "Dmp/Pegasi (F) T1 Lance {IS}-move.dmp"
+
+ALIGN 4
+FalcoknightSMS:
+#incbin "Dmp/Pegasi (F) T2 Lance {IS}-stand.dmp"
+
+ALIGN 4
+FalcoknightMMS:
+#incbin "Dmp/Pegasi (F) T2 Lance {IS}-move.dmp"
+
+ALIGN 4
+WyvernRiderSMS:
+#incbin "Dmp/Wyvern Rider (U) Axe {Unknown}-stand.dmp"
+
+ALIGN 4
+WyvernRiderMMS:
+#incbin "Dmp/Wyvern Rider (U) Axe {Unknown}-move.dmp"
+
+ALIGN 4
+DracoknightSMS:
+#incbin "Dmp/Wyvern Lord (M) Helmless Axe {flasuban}-stand.dmp"
+
+ALIGN 4
+DracoknightMMS:
+#incbin "Dmp/Wyvern Lord (M) Helmless Axe {flasuban}-move.dmp"
+
+ALIGN 4
+GoldKnightSMS:
+#incbin "Dmp/Gold Knight (U) Lance {Hypergammaspaces}-stand.dmp"
+
+ALIGN 4
+GoldKnightMMS:
+#incbin "Dmp/Gold Knight (U) Lance {Hypergammaspaces}-move.dmp"
+
+ALIGN 4
+SilverKnightSMS:
+#incbin "Dmp/Master Knight (M) Lance {Unknown}-stand.dmp"
+
+ALIGN 4
+SilverKnightMMS:
+#incbin "Dmp/Master Knight (M) Lance {Unknown}-walk.dmp"
+
+ALIGN 4
+RangerSMS:
+#incbin "Dmp/Ranger (M) {IS}-stand.dmp"
+
+ALIGN 4
+RangerMMS:
+#incbin "Dmp/Ranger (M) {IS}-move.dmp"
+
+ALIGN 4
+MageKnightSMS:
+#incbin "Dmp/Mage Knight (M) {IS}-stand.dmp"
+
+ALIGN 4
+MageKnightMMS:
+#incbin "Dmp/Mage Knight (M) {IS}-walk.dmp"
+
+ALIGN 4
+CataphractSMS:
+#incbin "Dmp/Great Knight (M) Alt Axe {Pikmin, L95, Der}-stand.dmp"
+
+ALIGN 4
+CataphractMMS:
+#incbin "Dmp/Great Knight (M) Alt Axe {Pikmin, L95, Der}-walk.dmp"
+
+ALIGN 4
+GriffonKnightSMS:
+#incbin "Dmp/Griffon Rider (U) Axe {N426}-stand.dmp"
+
+ALIGN 4
+GriffonKnightMMS:
+#incbin "Dmp/Griffon Rider (U) Axe {N426}-walk.dmp"
+
+ALIGN 4
+KinshiKnightSMS:
+#incbin "Dmp/Seraph Knight (F) Lance {CamusZekeSirius, flasuban}-stand.dmp"
+
+ALIGN 4
+KinshiKnightMMS:
+#incbin "Dmp/Seraph Knight (F) Lance {CamusZekeSirius, flasuban}-walk.dmp"
+
+ALIGN 4
+ScaleguardSMS:
+#incbin "Dmp/Loewe_Dragonlord_Standing(knabepicer).dmp"
+
+ALIGN 4
+ScaleguardMMS:
+#incbin "Dmp/Loewe_Dragonlord_Moving(knabepicer).dmp"
+
+ALIGN 4
+ArmorKnightSMS:
+#incbin "Dmp/Knight (U) Axe {Agro}-stand.dmp"
+
+ALIGN 4
+ArmorKnightMMS:
+#incbin "Dmp/Knight (U) Axe {Agro}-move.dmp"
+
+ALIGN 4
+GeneralSMS:
+#incbin "Dmp/General (U) Lance {IS}-stand.dmp"
+
+ALIGN 4
+GeneralMMS:
+#incbin "Dmp/General (U) Lance {IS}-move.dmp"
+
+ALIGN 4
+BaronSMS:
+#incbin "Dmp/Baron (U) Magic {WarPath}-stand.dmp"
+
+ALIGN 4
+BaronMMS:
+#incbin "Dmp/Baron (U) Magic {WarPath}-move.dmp"
+
+ALIGN 4
+SoldierSMS:
+#incbin "Dmp/Soldier (M) Shield Lance {Rexacuse, Peerless, Alusq}-stand.dmp"
+
+ALIGN 4
+SoldierMMS:
+#incbin "Dmp/Soldier (M) Shield Lance {Rexacuse, Peerless, Alusq}-move.dmp"
+
+ALIGN 4
+MercenarySMS:
+#incbin "Dmp/Mercenary (M) {IS}-stand.dmp"
+
+ALIGN 4
+MercenaryMMS:
+#incbin "Dmp/Mercenary (M) {IS}-walk.dmp"
+
+ALIGN 4
+FighterSMS:
+#incbin "Dmp/Fighter (M) Revamped Axe {Alusq}-stand.dmp"
+
+ALIGN 4
+FighterMMS:
+#incbin "Dmp/Fighter (M) Revamped Axe {Alusq}-walk.dmp"
+
+ALIGN 4
+MyrmidonSMS:
+#incbin "Dmp/Myrmidon (M) Sword {IS}-stand.dmp"
+
+ALIGN 4
+MyrmidonMMS:
+#incbin "Dmp/Myrmidon (M) Sword {IS}-walk.dmp"
+
+ALIGN 4
+FreelancerSMS:
+#incbin "Dmp/Militia (M) Deserter Lance {Alusq}-stand.dmp"
+
+ALIGN 4
+FreelancerMMS:
+#incbin "Dmp/Militia (M) Deserter Lance {Alusq}-move.dmp"
+
+ALIGN 4
+BrigandSMS:
+#incbin "Dmp/Brigand (M) Axe 16x16 {Alusq}-stand.dmp"
+
+ALIGN 4
+BrigandMMS:
+#incbin "Dmp/Brigand (M) Axe {IS}-walk.dmp"
+
+ALIGN 4
+ArcherSMS:
+#incbin "Dmp/Archer (M) {IS}-stand.dmp"
+
+ALIGN 4
+ArcherMMS:
+#incbin "Dmp/Archer (M) {IS}-walk.dmp"
+
+ALIGN 4
+HunterSMS:
+#incbin "Dmp/Hunter (M) {MeatOfJustice}-stand.dmp"
+
+ALIGN 4
+HunterMMS:
+#incbin "Dmp/Hunter (M) {MeatOfJustice}-walk.dmp"
+
+ALIGN 4
+ThiefSMS:
+#incbin "Dmp/Thief (M) {IS}-stand.dmp"
+
+ALIGN 4
+ThiefMMS:
+#incbin "Dmp/Thief (M) {IS}-walk.dmp"
+
+ALIGN 4
+FireMageSMS:
+#incbin "Dmp/Mage (M) {IS}-stand.dmp"
+
+ALIGN 4
+FireMageMMS:
+#incbin "Dmp/Mage (M) {IS}-walk.dmp"
+
+ALIGN 4
+WindMageSMS:
+#incbin "Dmp/bard_1(ArcherBias).dmp"
+
+ALIGN 4
+WindMageMMS:
+#incbin "Dmp/bardmove(ArcherBias).dmp"
+
+ALIGN 4
+ThunderMageSMS:
+#incbin "Dmp/Mage (M) Thunder (Leif)-stand.dmp"
+
+ALIGN 4
+ThunderMageMMS:
+#incbin "Dmp/Mage (M) Thunder (Leif)-walk.dmp"
+
+ALIGN 4
+ClericSMS:
+#incbin "Dmp/Priest (M) Caped Staff {topazlight}-stand.dmp"
+
+ALIGN 4
+ClericMMS:
+#incbin "Dmp/Priest (M) Caped Staff {topazlight}-walk.dmp"
+
+ALIGN 4
+HalberdierSMS:
+#incbin "Dmp/Halberdier (M) 2.0 {TBA}-stand.dmp"
+
+ALIGN 4
+HalberdierMMS:
+#incbin "Dmp/Halberdier (M) 2.0 {TBA}-move.dmp"
+
+ALIGN 4
+HeroSMS:
+#incbin "Dmp/Hero (M) Gerik-Style Sword {Nuramon}-stand.dmp"
+
+ALIGN 4
+HeroMMS:
+#incbin "Dmp/Hero (M) Gerik-Style Sword {Nuramon}-walk.dmp"
+
+ALIGN 4
+WarriorSMS:
+#incbin "Dmp/Warrior (M) Axe {IS}-stand.dmp"
+
+ALIGN 4
+WarriorMMS:
+#incbin "Dmp/Warrior (M) Axe {IS}-walk.dmp"
+
+ALIGN 4
+SwordmasterSMS:
+#incbin "Dmp/Swordmaster (M) {IS}-stand.dmp"
+
+ALIGN 4
+SwordmasterMMS:
+#incbin "Dmp/Swordmaster (M) {IS}-walk.dmp"
+
+ALIGN 4
+RavagerSMS:
+#incbin "Dmp/Great Lord (M) Ephraim-Infantry Lance {Snewping}-stand.dmp"
+
+ALIGN 4
+RavagerMMS:
+#incbin "Dmp/Great Lord (M) Ephraim-Infantry Lance {Snewping}-walk.dmp"
+
+ALIGN 4
+BerserkerSMS:
+#incbin "Dmp/Berserker (M) Axe {IS}-stand.dmp"
+
+ALIGN 4
+BerserkerMMS:
+#incbin "Dmp/Berserker (M) Axe {IS}-walk.dmp"
+
+ALIGN 4
+SniperSMS:
+#incbin "Dmp/Sniper (M) {IS}-stand.dmp"
+
+ALIGN 4
+SniperMMS:
+#incbin "Dmp/Sniper (M) {IS}-walk.dmp"
+
+ALIGN 4
+AssassinSMS:
+#incbin "Dmp/Assassin (M) {IS}-stand.dmp"
+
+ALIGN 4
+AssassinMMS:
+#incbin "Dmp/Assassin (M) {IS}-walk.dmp"
+
+ALIGN 4
+FireSageSMS:
+#incbin "Dmp/Sage (M) {IS}-stand.dmp"
+
+ALIGN 4
+FireSageMMS:
+#incbin "Dmp/Sage (M) {IS}-walk.dmp"
+
+ALIGN 4
+WindSageSMS:
+#incbin "Dmp/Sage (M) Battle Sage Magic {Smug_Mug, Unknown}-stand.dmp"
+
+ALIGN 4
+WindSageMMS:
+#incbin "Dmp/Sage (M) Battle Sage Magic {Smug_Mug, Unknown}-walk.dmp"
+
+ALIGN 4
+ThunderSageSMS:
+#incbin "Dmp/High Magus (M) {Unknown}-stand.dmp"
+
+ALIGN 4
+ThunderSageMMS:
+#incbin "Dmp/High Magus (M) {Unknown}-walk.dmp"
+
+ALIGN 4
+BishopSMS:
+#incbin "Dmp/Bishop (M) {IS}-stand.dmp"
+
+ALIGN 4
+BishopMMS:
+#incbin "Dmp/Bishop (M) {IS}-walk.dmp"
+
+ALIGN 4
+GladiatorSMS:
+#incbin "Dmp/Sergeant (M) {Spud}-stand.dmp"
+
+ALIGN 4
+GladiatorMMS:
+#incbin "Dmp/Sergeant (M) {Spud}-move.dmp"
+
+ALIGN 4
+WarMonkSMS:
+#incbin "Dmp/War Monk (M) Axe {Der}-stand.dmp"
+
+ALIGN 4
+WarMonkMMS:
+#incbin "Dmp/War Monk (M) Staff {Der, Author_Pendragon}-walk.dmp"
+
+ALIGN 4
+SlayerSMS:
+#incbin "Dmp/Dread Fighter (M) {Nuramon}-stand.dmp"
+
+ALIGN 4
+SlayerMMS:
+#incbin "Dmp/Dread Fighter (M) {Nuramon}-walk.dmp"
+
+ALIGN 4
+DragoonSMS:
+#incbin "Dmp/Dragoon (M) v2 Lance {Pikmin, Unknown}-stand.dmp"
+
+ALIGN 4
+DragoonMMS:
+#incbin "Dmp/Dragoon (M) v2 Lance {Pikmin, Unknown}-walk.dmp"
+
+ALIGN 4
+HarbingerSMS:
+#incbin "Dmp/Great Lord (M) Hector-Harbinger {SD9K}-stand.dmp"
+
+ALIGN 4
+HarbingerMMS:
+#incbin "Dmp/Great Lord (M) Hector-Harbinger {SD9K}-walk.dmp"
+
+ALIGN 4
+AdventurerSMS:
+#incbin "Dmp/Marksman (M) Nuramon-style {ArcherBias}-stand.dmp"
+
+ALIGN 4
+AdventurerMMS:
+#incbin "Dmp/Marksman (M) Nuramon-style {ArcherBias}-walk.dmp"
+
+ALIGN 4
+BallisticianSMS:
+#incbin "Dmp/Ballistician (M) Improved {flasuban, Der}-stand.dmp"
+
+ALIGN 4
+BallisticianMMS:
+#incbin "Dmp/Ballistician (M) Improved {flasuban, Der}-move.dmp"
+
+ALIGN 4
+TricksterSMS:
+#incbin "Dmp/Trickster (M) Redone {StreetHero, blood}-stand.dmp"
+
+ALIGN 4
+TricksterMMS:
+#incbin "Dmp/Trickster (M) Redone {StreetHero, blood}-walk.dmp"
+
+ALIGN 4
+GrassrunnerSMS:
+#incbin "Dmp/Nomad Trooper (M) {IS}-stand.dmp"
+
+ALIGN 4
+GrassrunnerMMS:
+#incbin "Dmp/Nomad Trooper (M) {IS}-walk.dmp"
+
+ALIGN 4
+LordSMS:
+#incbin "Dmp/Cavalier (F) Lance {Tordo45}-stand.dmp"
+
+ALIGN 4
+LordMMS:
+#incbin "Dmp/Cavalier (F) Lance {Tordo45}-walk.dmp"
+
+ALIGN 4
+KnightLordSMS:
+#incbin "Dmp/Paladin (F) Ponytail Lance {Tordo45}-stand.dmp"
+
+ALIGN 4
+KnightLordMMS:
+#incbin "Dmp/Paladin (F) Ponytail Lance {Tordo45}-walk.dmp"
+
+ALIGN 4
+RogueSMS:
+#incbin "Dmp/Rogue{IS}.dmp"
+
+ALIGN 4
+RogueMMS:
+#incbin "Dmp/Rogue-move{IS}.dmp"

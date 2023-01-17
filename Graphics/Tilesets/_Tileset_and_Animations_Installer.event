@@ -1,0 +1,2 @@
+#include "_TilesetInstaller.event"
+#include "_MapAnimationsInstaller.event"

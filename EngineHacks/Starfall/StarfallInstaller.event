@@ -1,0 +1,51 @@
+#include "SplitPromoItems/SplitPromoItems.event"
+#include "NewCalculations/Installer.event"
+#include "ModularMinimugBox-master/Installers/MMBInstallerBellsOfByelen.event"
+#include "GroupAI/GroupAI.event"
+#include "Music/MusicAsmInstaller.event"
+//#include "FE4WeaponRanks/Installer.event"
+
+// installs thracia trade
+PUSH
+  ORG $22F50
+  BYTE 0xC0 0x46
+POP
+
+// thanks to Blademaster for the hex locations for ranks
+
+PUSH // Weapon level modifications
+ORG 0x16d66 // D rank WEXP
+BYTE (DRank - 1)
+ORG 0x16d6e // C rank WEXP
+BYTE (CRank - 1)
+ORG 0x16d76 // B rank WEXP
+BYTE (BRank - 1)
+ORG 0x16d7e // A rank WEXP
+BYTE (ARank - 1)
+ORG 0x16d86 // S rank WEXP
+BYTE (SRank - 1)
+ORG 0x16e90 // bar to D rank WEXP
+BYTE (DRank - 1)
+ORG 0x16e96 // D rank WEXP
+BYTE (DRank - 1)
+ORG 0x16e9a // bar to C rank WEXP
+BYTE (DRank - 1)
+ORG 0x16ea0 // C rank WEXP
+BYTE (CRank - 1)
+ORG 0x16ea4 // bar to B rank WEXP
+BYTE (DRank - 1)
+ORG 0x16eaa // B rank WEXP
+BYTE (BRank - 1)
+ORG 0x16eae // bar to A rank WEXP
+BYTE (DRank - 1)
+ORG 0x16eb4 // A rank WEXP
+BYTE (ARank - 1)
+ORG 0x16eb8 // bar to S rank WEXP
+BYTE (DRank - 1)
+ORG 0x2C150 // removes S-rank limit, credit Tequila
+BYTE 0x11 0xE0
+ORG 0x2c1a2 // removes A-rank limit for unpromoted units, credit 7743
+BYTE 251
+ORG 0x2c1a6
+BYTE 251
+POP

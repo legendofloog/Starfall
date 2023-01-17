@@ -1,0 +1,6 @@
+#define EsmeMug 0x2
+#define SolominMug 0x3
+#define OldrikMug 0x4
+#define GeorgiosMug 0x9
+#define AlastoreMug 0xa
+#define KorinaMug 0x14

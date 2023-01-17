@@ -1,0 +1,45 @@
+## EsmeName
+Esme[X]
+
+## EsmeDesc
+A Hederan lordling, daughter of[N]
+Duke Luiza. Seeks to restore her house.[X]
+
+## SolominName
+Solomin[X]
+
+## SolominDesc
+An old Hederen treasure hunter, hired[N]
+by Esme to help chart the new world.[X]
+
+## OldrikName
+Oldrik[X]
+
+## OldrikDesc
+A noble of House Luiza, Esme's cousin.[N]
+Insists they're rivals, to her chagrin.[X]
+
+## BaericName
+Baeric[X]
+
+## BaericDesc
+Works as Esme's bodyguard for coin.[N]
+A stoic man who keeps to himself.[X]
+
+## BasrenName
+Basren[X]
+
+## BasrenDesc
+One of Esme's few battle-ready vassals.[N]
+Used to farm life, not the battlefield.[X]
+
+## Chapter1GenericsName
+Unknown[X]
+
+## Chapter1GenericsDesc
+A group of strange enemies without[N]
+a banner. Show no signs of reason.[X]
+
+## Chapter1BossDesc
+The leader of an unknown force.[N]
+Feral beyond reason.[X]

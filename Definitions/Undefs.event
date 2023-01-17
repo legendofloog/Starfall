@@ -1,0 +1,30 @@
+//items
+
+#undef KillingEdge
+#undef Armorslayer
+#undef Wyrmslayer
+#undef HeavySpear
+#undef Ravager
+
+//classes
+#undef GreatKnight
+#undef WyvernRider
+#undef Ranger
+#undef MageKnight
+#undef General
+#undef Soldier
+#undef Mercenary
+#undef Fighter
+#undef Myrmidon
+#undef Brigand
+#undef Archer
+#undef Thief
+#undef Cleric
+#undef Hero
+#undef Warrior
+#undef Swordmaster
+#undef Berserker
+#undef Sniper
+#undef Assassin
+#undef Bishop
+#undef Rogue

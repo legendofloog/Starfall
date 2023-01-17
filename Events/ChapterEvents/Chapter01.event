@@ -1,0 +1,124 @@
+EventPointerTable(Chapter1Events, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+//TurnEventPlayer(0, AlenaSpawn, 2)
+TurnBasedEvents:
+END_MAIN
+
+//CharacterEventBothWays(7, LoeweIskraTalkCh1, Loewe, Iskra)
+CharacterBasedEvents:
+END_MAIN
+
+//Door(3,10)
+//Chest(Mend,1,10)
+//LOCA 9 LoeweSvetomirDoor [16,10] 0x12
+//Escape(2,0)
+LocationBasedEvents:
+END_MAIN
+
+//AREA 0 CivilianEscape [2, 0] [3, 0]
+//AFEV 12 LoeweSvetomirFreed 9
+MiscBasedEvents:
+LordDeathConditionGameOver
+DefeatAll(EndingScene)
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Units1:
+UNIT Esme Lord 0x0 Level(1,Ally,False) [3,18] 0x0 0x0 0x0 0x0 [IronSword,Heal,Vulnerary]     NoAI
+UNIT Solomin Grassrunner Esme Level(15, Ally, False) [2,18] 0x0 0x0 0x0 0x0 [SilverSword,IronSword,Vulnerary] NoAI
+UNIT Oldrik LanceRider Esme Level(1, Ally, False) [1,17] 0x0 0x0 0x0 0x0 [IronLance,Vulnerary] NoAI
+UNIT Baeric AxeRider Esme Level(5, Ally, False) [1,18] 0x0 0x0 0x0 0x0 [SteelAxe,IronAxe,Vulnerary] NoAI
+UNIT Basren BowRider Esme Level(1, Ally, False) [1,19] 0x0 0x0 0x0 0x0 [IronBow,Vulnerary] NoAI
+UNIT
+
+EnemyUnits1:
+UNIT Chapter1Generics Brigand 0x0 Level(1,Enemy,True) [6,18] 0x0 0x0 0x0 0x0 [IronAxe] GroupOneAI
+UNIT Chapter1Generics Mercenary 0x0 Level(1,Enemy,True) [7,18] 0x0 0x0 0x0 0x0 [IronSword] GroupOneAI
+UNIT Chapter1Generics Freelancer 0x0 Level(1,Enemy,True) [5,20] 0x0 0x0 0x0 0x0 [IronLance] GroupOneAI
+
+UNIT Chapter1Generics Archer 0x0 Level(1,Enemy,True) [8,13] 0x0 0x0 0x0 0x0 [IronBow] GroupTwoAI
+UNIT Chapter1Generics Myrmidon 0x0 Level(1,Enemy,True) [10,11] 0x0 0x0 0x0 0x0 [IronSword] GroupTwoAI
+UNIT Chapter1Generics Fighter 0x0 Level(1,Enemy,True) [5,9] 0x0 0x0 0x0 0x0 [SteelAxe] GroupTwoAI
+
+UNIT Chapter1Generics Freelancer 0x0 Level(1,Enemy,True) [6,6] DropItem 0x0 0x0 0x0 [Javelin] TwoActionAI
+
+UNIT Chapter1Generics Mercenary 0x0 Level(1,Enemy,True) [3,8] 0x0 0x0 0x0 0x0 [IronSword] GroupThreeAI
+UNIT Chapter1Generics Soldier 0x0 Level(1,Enemy,True) [4,5] 0x0 0x0 0x0 0x0 [SteelLance] GroupThreeAI
+UNIT Chapter1Generics Hunter 0x0 Level(1,Enemy,True) [7,4] 0x0 0x0 0x0 0x0 [IronBow] GroupThreeAI
+UNIT Chapter1Generics Brigand 0x0 Level(1,Enemy,True) [5,0] 0x0 0x0 0x0 0x0 [IronAxe] GroupThreeAI
+
+UNIT Chapter1Generics Fighter 0x0 Level(1,Enemy,True) [6,2] 0x0 0x0 0x0 0x0 [IronAxe] GroupFourAI
+UNIT Chapter1Generics Freelancer 0x0 Level(1,Enemy,True) [9,3] 0x0 0x0 0x0 0x0 [IronLance] GroupFourAI
+UNIT Chapter1Generics Archer 0x0 Level(1,Enemy,True) [12,2] 0x0 0x0 0x0 0x0 [SteelBow] GroupFourAI
+UNIT Chapter1Boss Mercenary 0x0 Level(3,Enemy,False) [12,5] DropItem 0x0 0x0 0x0 [SteelSword] GroupFourAI
+UNIT
+
+/*
+Flashback2Units2:
+UNIT Senny Sniper_F   0x0          Level(1,NPC,False) [14,2] 0x0 0x0 0x1 REDA9R2 [0x0] NoAI
+UNIT Chapter1Generics AxeFighter 0x0    Level(1,NPC,False) [13,0] 0x0 0x0 0x1 REDA8R1 [0x0] NoAI
+UNIT Svetomir SwordFighter 0x0 Level(1,NPC,False) [14,1] 0x0 0x0 0x1 REDA10R1 [0x0] NoAI
+UNIT 
+
+
+
+BoroUnitGroup:
+UNIT Boro_Ch1 Champion 0x00 Level(5,Enemy,False) [19,16] 0x0 0x0 0x1 REDA19R16 [MasterLance] DoNotAttack07AI
+UNIT
+*/
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+LOAD1 1 Units1
+LOAD1 1 EnemyUnits1
+ENUN
+Text(Ch1StartEvent)
+Text(Ch1StartEvent2)
+Text(Ch1StartEvent3)
+Text(Ch1StartEvent4)
+Text(Ch1BossText)
+Text(Ch1StartEvent5)
+NoFade
+ENDA
+
+EndingScene:
+Text(Ch1EndingScene)
+IfAliveDialog(Oldrik,Ch1OldrikEndQuote,0)
+IfAliveDialog(Basren,Ch1BasrenEndQuote,1)
+IfAliveDialog(Baeric,Ch1BaericEndQuote,2)
+Text(Ch1EndingScene2)
+SystemText(Ch1EndingNarration)
+MNC2 Chapter2
+NoFade
+ENDA

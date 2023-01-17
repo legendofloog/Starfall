@@ -1,0 +1,114 @@
+
+PUSH
+ORG $CC5F6
+SHORT 0x46C0 //nop
+jumpToHack(SplitPromoItems)
+ORG $CC5DE
+SHORT 0x46C0 //nop
+jumpToHack(SplitPromoItemsPrep)
+POP
+
+#include "SplitPromoItems.lyn.event"
+#include "SplitPromoPrepScreen.lyn.event"
+
+
+#define PromoItemEntry(itemID,promoList) "BYTE itemID 0 0 0; POIN promoList"
+#define PromoItemsEnd "WORD 0 0"
+
+ALIGN 4
+PromoItemsList:
+PromoItemEntry(HeroCrest,HeroCrestPromoList)
+PromoItemEntry(KnightProof,KnightProofPromoList)
+PromoItemEntry(HuntersMark,HuntersMarkPromoList)
+PromoItemEntry(RidersBadge,RidersBadgePromoList)
+PromoItemEntry(GuidingRing,GuidingRingPromoList)
+PromoItemsEnd
+
+ALIGN 4
+SplitPromoItemsList:
+BYTE 0
+
+#define PromoListEntry(baseClass,promoClass) "BYTE baseClass promoClass"
+#define PromoListEnd "SHORT 0"
+
+ALIGN 4
+HeroCrestPromoList:
+PromoListEntry(SwordRider,GoldKnight)
+PromoListEntry(LanceRider,SilverKnight)
+PromoListEntry(AxeRider,GoldKnight)
+PromoListEntry(BowRider,SilverKnight)
+PromoListEntry(PegasusRider,GriffonKnight)
+PromoListEntry(WyvernRider,GriffonKnight)
+PromoListEntry(Soldier,Halberdier)
+PromoListEntry(Mercenary,Hero)
+PromoListEntry(Fighter,Hero)
+PromoListEntry(Myrmidon, Swordmaster)
+PromoListEntry(Freelancer, Ravager)
+PromoListEntry(Brigand, Berserker)
+PromoListEntry(Archer, Warrior)
+PromoListEntry(Cleric, WarMonk)
+PromoListEntry(FireMage,Slayer)
+PromoListEntry(WindMage,Dragoon)
+PromoListEntry(ThunderMage,Harbinger)
+PromoListEntry(Lord,KnightLord)
+PromoListEntry(Thief, Assassin)
+PromoListEnd
+
+ALIGN 4
+KnightProofPromoList:
+PromoListEntry(AxeRider,Cataphract)
+PromoListEntry(WyvernRider,Scaleguard)
+PromoListEntry(ArmorKnight, General)
+PromoListEntry(ThunderMage, Baron)
+PromoListEntry(Soldier, General)
+PromoListEntry(Brigand, Halberdier)
+PromoListEntry(Mercenary,Gladiator)
+PromoListEntry(Freelancer,Gladiator)
+PromoListEntry(Hunter,Ballistician)
+PromoListEnd
+
+ALIGN 4
+HuntersMarkPromoList:
+PromoListEntry(SwordRider,Ranger)
+PromoListEntry(BowRider,Ranger)
+PromoListEntry(PegasusRider,KinshiKnight)
+PromoListEntry(Hunter, Assassin)
+PromoListEntry(Thief, Rogue)
+PromoListEntry(Fighter,Warrior)
+PromoListEntry(Myrmidon, Assassin)
+PromoListEntry(Archer, Sniper)
+PromoListEntry(Cleric, Adventurer)
+PromoListEntry(WindMage, Trickster)
+PromoListEnd
+
+ALIGN 4
+RidersBadgePromoList:
+PromoListEntry(SwordRider,FreeKnight)
+PromoListEntry(LanceRider,DukeKnight)
+PromoListEntry(AxeRider,GreatKnight)
+PromoListEntry(BowRider,ArchKnight)
+PromoListEntry(PegasusRider,Falcoknight)
+PromoListEntry(WyvernRider,Dracoknight)
+PromoListEntry(ArmorKnight, Cataphract)
+PromoListEntry(Mercenary, Ranger)
+PromoListEntry(FireMage, MageKnight)
+PromoListEntry(Soldier, KinshiKnight)
+PromoListEntry(Archer, KinshiKnight)
+PromoListEnd
+
+ALIGN 4
+GuidingRingPromoList:
+PromoListEntry(LanceRider,MageKnight)
+PromoListEntry(ArmorKnight, Baron)
+PromoListEntry(FireMage, FireSage)
+PromoListEntry(WindMage, WindSage)
+PromoListEntry(ThunderMage, ThunderSage)
+PromoListEntry(Cleric, Bishop)
+PromoListEntry(Fighter, WarMonk)
+PromoListEntry(Myrmidon, Slayer)
+PromoListEntry(Freelancer, Dragoon)
+PromoListEntry(Brigand, Harbinger)
+PromoListEntry(Hunter, Adventurer)
+PromoListEntry(Thief, Trickster)
+PromoListEnd
+

@@ -1,0 +1,39 @@
+    
+    #include "CustomDefinitions.event"
+    #define ClassTable NewClassTable
+    #include "EAstdlib.event"
+    #include "Definitions/_DefinitionsInstaller.event"
+    
+    ORG FreeSpace
+
+
+    #include "repointedTextTable.event"
+
+    //Text first for Text ID definitions
+    #include "Text/InstallTextData.event"
+    MESSAGE Used text space ends at currentOffset
+
+    
+    //CSV tables
+    #include "Tables/_MasterTableInstaller.event"
+    MESSAGE Used table space ends at currentOffset
+
+    #include "Graphics/_MasterGraphicsInstaller.event"
+    MESSAGE Used graphics space ends at currentOffset
+
+    //Music
+    #include "Music/_MusicInstaller.event"
+    MESSAGE Music data ends at CURRENTOFFSET
+
+    //Engine Hacks
+    #include "EngineHacks/_MasterHackInstaller.event"
+    MESSAGE Used hax space ends at currentOffset
+
+    //Events
+    #include "Events/_EventsInstaller.event"
+
+    //Maps
+    #include "Maps/MasterMapInstaller.event"
+	
+    MESSAGE Used free space ends at currentOffset
+

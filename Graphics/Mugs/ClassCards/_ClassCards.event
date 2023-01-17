@@ -1,0 +1,557 @@
+/*
+ClassCardFile:
+#incbin "Dmp/.dmp"
+
+ClassCardPalette:
+#incbin "Dmp/.png_pal.dmp"
+
+setCardEntry(ClassCard,ClassCardFile,ClassCardPalette)
+*/
+
+LordClassCardFile:
+#incbin "Dmp/Lord.dmp"
+
+LordClassCardPalette:
+#incbin "Dmp/Lord.png_pal.dmp"
+
+setCardEntry(LordClassCard,LordClassCardFile,LordClassCardPalette)
+
+
+SwordRiderClassCardFile:
+#incbin "Dmp/SwordRider.dmp"
+
+SwordRiderClassCardPalette:
+#incbin "Dmp/SwordRider.png_pal.dmp"
+
+setCardEntry(SwordRiderClassCard,SwordRiderClassCardFile,SwordRiderClassCardPalette)
+
+
+LanceRiderClassCardFile:
+#incbin "Dmp/LanceRider.dmp"
+
+LanceRiderClassCardPalette:
+#incbin "Dmp/LanceRider.png_pal.dmp"
+
+setCardEntry(LanceRiderClassCard,LanceRiderClassCardFile,LanceRiderClassCardPalette)
+
+
+AxeRiderClassCardFile:
+#incbin "Dmp/AxeRider.dmp"
+
+AxeRiderClassCardPalette:
+#incbin "Dmp/AxeRider.png_pal.dmp"
+
+setCardEntry(AxeRiderClassCard,AxeRiderClassCardFile,AxeRiderClassCardPalette)
+
+
+BowRiderClassCardFile:
+#incbin "Dmp/BowRider.dmp"
+
+BowRiderClassCardPalette:
+#incbin "Dmp/BowRider.png_pal.dmp"
+
+setCardEntry(BowRiderClassCard,BowRiderClassCardFile,BowRiderClassCardPalette)
+
+
+ArmorClassCardFile:
+#incbin "Dmp/Armor.dmp"
+
+ArmorClassCardPalette:
+#incbin "Dmp/Armor.png_pal.dmp"
+
+setCardEntry(ArmorClassCard,ArmorClassCardFile,ArmorClassCardPalette)
+
+
+SoldierClassCardFile:
+#incbin "Dmp/Soldier.dmp"
+
+SoldierClassCardPalette:
+#incbin "Dmp/Soldier.png_pal.dmp"
+
+setCardEntry(SoldierClassCard,SoldierClassCardFile,SoldierClassCardPalette)
+
+
+MercenaryClassCardFile:
+#incbin "Dmp/Mercenary.dmp"
+
+MercenaryClassCardPalette:
+#incbin "Dmp/Mercenary.png_pal.dmp"
+
+setCardEntry(MercenaryClassCard,MercenaryClassCardFile,MercenaryClassCardPalette)
+
+
+FighterClassCardFile:
+#incbin "Dmp/Fighter.dmp"
+
+FighterClassCardPalette:
+#incbin "Dmp/Fighter.png_pal.dmp"
+
+setCardEntry(FighterClassCard,FighterClassCardFile,FighterClassCardPalette)
+
+
+ArcherClassCardFile:
+#incbin "Dmp/Archer.dmp"
+
+ArcherClassCardPalette:
+#incbin "Dmp/Archer.png_pal.dmp"
+
+setCardEntry(ArcherClassCard,ArcherClassCardFile,ArcherClassCardPalette)
+
+
+ThiefClassCardFile:
+#incbin "Dmp/Thief.dmp"
+
+ThiefClassCardPalette:
+#incbin "Dmp/Thief.png_pal.dmp"
+
+setCardEntry(ThiefClassCard,ThiefClassCardFile,ThiefClassCardPalette)
+
+
+MyrmidonClassCardFile:
+#incbin "Dmp/Myrmidon.dmp"
+
+MyrmidonClassCardPalette:
+#incbin "Dmp/Myrmidon.png_pal.dmp"
+
+setCardEntry(MyrmidonClassCard,MyrmidonClassCardFile,MyrmidonClassCardPalette)
+
+
+DeserterClassCardFile:
+#incbin "Dmp/Deserter.dmp"
+
+DeserterClassCardPalette:
+#incbin "Dmp/Deserter.png_pal.dmp"
+
+setCardEntry(DeserterClassCard,DeserterClassCardFile,DeserterClassCardPalette)
+
+
+BrigandClassCardFile:
+#incbin "Dmp/Brigand.dmp"
+
+BrigandClassCardPalette:
+#incbin "Dmp/Brigand.png_pal.dmp"
+
+setCardEntry(BrigandClassCard,BrigandClassCardFile,BrigandClassCardPalette)
+
+
+PirateClassCardFile:
+#incbin "Dmp/Pirate.dmp"
+
+PirateClassCardPalette:
+#incbin "Dmp/Pirate.png_pal.dmp"
+
+setCardEntry(PirateClassCard,PirateClassCardFile,PirateClassCardPalette)
+
+
+PegasusRiderClassCardFile:
+#incbin "Dmp/PegasusRider.dmp"
+
+PegasusRiderClassCardPalette:
+#incbin "Dmp/PegasusRider.png_pal.dmp"
+
+setCardEntry(PegasusRiderClassCard,PegasusRiderClassCardFile,PegasusRiderClassCardPalette)
+
+
+WyvernRiderClassCardFile:
+#incbin "Dmp/WyvernRider.dmp"
+
+WyvernRiderClassCardPalette:
+#incbin "Dmp/WyvernRider.png_pal.dmp"
+
+setCardEntry(WyvernRiderClassCard,WyvernRiderClassCardFile,WyvernRiderClassCardPalette)
+
+
+ThunderMageClassCardFile:
+#incbin "Dmp/ThunderMage.dmp"
+
+ThunderMageClassCardPalette:
+#incbin "Dmp/ThunderMage.png_pal.dmp"
+
+setCardEntry(ThunderMageClassCard,ThunderMageClassCardFile,ThunderMageClassCardPalette)
+
+
+FireMageClassCardFile:
+#incbin "Dmp/FireMage.dmp"
+
+FireMageClassCardPalette:
+#incbin "Dmp/FireMage.png_pal.dmp"
+
+setCardEntry(FireMageClassCard,FireMageClassCardFile,FireMageClassCardPalette)
+
+
+WindMageClassCardFile:
+#incbin "Dmp/WindMage.dmp"
+
+WindMageClassCardPalette:
+#incbin "Dmp/WindMage.png_pal.dmp"
+
+setCardEntry(WindMageClassCard,WindMageClassCardFile,WindMageClassCardPalette)
+
+
+ClericClassCardFile:
+#incbin "Dmp/Cleric.dmp"
+
+ClericClassCardPalette:
+#incbin "Dmp/Cleric.png_pal.dmp"
+
+setCardEntry(ClericClassCard,ClericClassCardFile,ClericClassCardPalette)
+
+
+TroubadourClassCardFile:
+#incbin "Dmp/Troubadour.dmp"
+
+TroubadourClassCardPalette:
+#incbin "Dmp/Troubadour.png_pal.dmp"
+
+setCardEntry(TroubadourClassCard,TroubadourClassCardFile,TroubadourClassCardPalette)
+
+
+PaladinClassCardFile:
+#incbin "Dmp/Paladin.dmp"
+
+PaladinClassCardPalette:
+#incbin "Dmp/Paladin.png_pal.dmp"
+
+setCardEntry(PaladinClassCard,PaladinClassCardFile,PaladinClassCardPalette)
+
+
+ForrestKnightClassCardFile:
+#incbin "Dmp/ForrestKnight.dmp"
+
+ForrestKnightClassCardPalette:
+#incbin "Dmp/ForrestKnight.png_pal.dmp"
+
+setCardEntry(ForrestKnightClassCard,ForrestKnightClassCardFile,ForrestKnightClassCardPalette)
+
+
+LancerClassCardFile:
+#incbin "Dmp/Lancer.dmp"
+
+LancerClassCardPalette:
+#incbin "Dmp/Lancer.png_pal.dmp"
+
+setCardEntry(LancerClassCard,LancerClassCardFile,LancerClassCardPalette)
+
+
+GreatKnightClassCardFile:
+#incbin "Dmp/GreatKnight.dmp"
+
+GreatKnightClassCardPalette:
+#incbin "Dmp/GreatKnight.png_pal.dmp"
+
+setCardEntry(GreatKnightClassCard,GreatKnightClassCardFile,GreatKnightClassCardPalette)
+
+
+ArchKnightClassCardFile:
+#incbin "Dmp/ArchKnight.dmp"
+
+ArchKnightClassCardPalette:
+#incbin "Dmp/ArchKnight.png_pal.dmp"
+
+setCardEntry(ArchKnightClassCard,ArchKnightClassCardFile,ArchKnightClassCardPalette)
+
+
+FireKnightClassCardFile:
+#incbin "Dmp/FireKnight.dmp"
+
+FireKnightClassCardPalette:
+#incbin "Dmp/FireKnight.png_pal.dmp"
+
+setCardEntry(FireKnightClassCard,FireKnightClassCardFile,FireKnightClassCardPalette)
+
+
+WindKnightClassCardFile:
+#incbin "Dmp/WindKnight.dmp"
+
+WindKnightClassCardPalette:
+#incbin "Dmp/WindKnight.png_pal.dmp"
+
+setCardEntry(WindKnightClassCard,WindKnightClassCardFile,WindKnightClassCardPalette)
+
+
+ThunderKnightClassCardFile:
+#incbin "Dmp/ThunderKnight.dmp"
+
+ThunderKnightClassCardPalette:
+#incbin "Dmp/ThunderKnight.png_pal.dmp"
+
+setCardEntry(ThunderKnightClassCard,ThunderKnightClassCardFile,ThunderKnightClassCardPalette)
+
+
+GeneralClassCardFile:
+#incbin "Dmp/General.dmp"
+
+GeneralClassCardPalette:
+#incbin "Dmp/General.png_pal.dmp"
+
+setCardEntry(GeneralClassCard,GeneralClassCardFile,GeneralClassCardPalette)
+
+
+BaronClassCardFile:
+#incbin "Dmp/Baron.dmp"
+
+BaronClassCardPalette:
+#incbin "Dmp/Baron.png_pal.dmp"
+
+setCardEntry(BaronClassCard,BaronClassCardFile,BaronClassCardPalette)
+
+
+HalberdierClassCardFile:
+#incbin "Dmp/Halberdier.dmp"
+
+HalberdierClassCardPalette:
+#incbin "Dmp/Halberdier.png_pal.dmp"
+
+setCardEntry(HalberdierClassCard,HalberdierClassCardFile,HalberdierClassCardPalette)
+
+
+HeroClassCardFile:
+#incbin "Dmp/Hero.dmp"
+
+HeroClassCardPalette:
+#incbin "Dmp/Hero.png_pal.dmp"
+
+setCardEntry(HeroClassCard,HeroClassCardFile,HeroClassCardPalette)
+
+
+WarriorClassCardFile:
+#incbin "Dmp/Warrior.dmp"
+
+WarriorClassCardPalette:
+#incbin "Dmp/Warrior.png_pal.dmp"
+
+setCardEntry(WarriorClassCard,WarriorClassCardFile,WarriorClassCardPalette)
+
+
+ChampionClassCardFile:
+#incbin "Dmp/Champion.dmp"
+
+ChampionClassCardPalette:
+#incbin "Dmp/Champion.png_pal.dmp"
+
+setCardEntry(ChampionClassCard,ChampionClassCardFile,ChampionClassCardPalette)
+
+
+SlayerClassCardFile:
+#incbin "Dmp/Slayer.dmp"
+
+SlayerClassCardPalette:
+#incbin "Dmp/Slayer.png_pal.dmp"
+
+setCardEntry(SlayerClassCard,SlayerClassCardFile,SlayerClassCardPalette)
+
+
+DragoonClassCardFile:
+#incbin "Dmp/Dragoon.dmp"
+
+DragoonClassCardPalette:
+#incbin "Dmp/Dragoon.png_pal.dmp"
+
+setCardEntry(DragoonClassCard,DragoonClassCardFile,DragoonClassCardPalette)
+
+
+HarbingerClassCardFile:
+#incbin "Dmp/Harbinger.dmp"
+
+HarbingerClassCardPalette:
+#incbin "Dmp/Harbinger.png_pal.dmp"
+
+setCardEntry(HarbingerClassCard,HarbingerClassCardFile,HarbingerClassCardPalette)
+
+
+WarMonkClassCardFile:
+#incbin "Dmp/WarMonk.dmp"
+
+WarMonkClassCardPalette:
+#incbin "Dmp/WarMonk.png_pal.dmp"
+
+setCardEntry(WarMonkClassCard,WarMonkClassCardFile,WarMonkClassCardPalette)
+
+
+AdventurerClassCardFile:
+#incbin "Dmp/Adventurer.dmp"
+
+AdventurerClassCardPalette:
+#incbin "Dmp/Adventurer.png_pal.dmp"
+
+setCardEntry(AdventurerClassCard,AdventurerClassCardFile,AdventurerClassCardPalette)
+
+
+AssassinClassCardFile:
+#incbin "Dmp/Assassin.dmp"
+
+AssassinClassCardPalette:
+#incbin "Dmp/Assassin.png_pal.dmp"
+
+setCardEntry(AssassinClassCard,AssassinClassCardFile,AssassinClassCardPalette)
+
+
+TricksterClassCardFile:
+#incbin "Dmp/Trickster.dmp"
+
+TricksterClassCardPalette:
+#incbin "Dmp/Trickster.png_pal.dmp"
+
+setCardEntry(TricksterClassCard,TricksterClassCardFile,TricksterClassCardPalette)
+
+
+GrassrunnerClassCardFile:
+#incbin "Dmp/Grassrunner.dmp"
+
+GrassrunnerClassCardPalette:
+#incbin "Dmp/Grassrunner.png_pal.dmp"
+
+setCardEntry(GrassrunnerClassCard,GrassrunnerClassCardFile,GrassrunnerClassCardPalette)
+
+
+SniperClassCardFile:
+#incbin "Dmp/Sniper.dmp"
+
+SniperClassCardPalette:
+#incbin "Dmp/Sniper.png_pal.dmp"
+
+setCardEntry(SniperClassCard,SniperClassCardFile,SniperClassCardPalette)
+
+
+SwordmasterClassCardFile:
+#incbin "Dmp/Swordmaster.dmp"
+
+SwordmasterClassCardPalette:
+#incbin "Dmp/Swordmaster.png_pal.dmp"
+
+setCardEntry(SwordmasterClassCard,SwordmasterClassCardFile,SwordmasterClassCardPalette)
+
+
+RavagerClassCardFile:
+#incbin "Dmp/Ravager.dmp"
+
+RavagerClassCardPalette:
+#incbin "Dmp/Ravager.png_pal.dmp"
+
+setCardEntry(RavagerClassCard,RavagerClassCardFile,RavagerClassCardPalette)
+
+
+BerserkerClassCardFile:
+#incbin "Dmp/Berserker.dmp"
+
+BerserkerClassCardPalette:
+#incbin "Dmp/Berserker.png_pal.dmp"
+
+setCardEntry(BerserkerClassCard,BerserkerClassCardFile,BerserkerClassCardPalette)
+
+
+FalcoknightClassCardFile:
+#incbin "Dmp/Falcoknight.dmp"
+
+FalcoknightClassCardPalette:
+#incbin "Dmp/Falcoknight.png_pal.dmp"
+
+setCardEntry(FalcoknightClassCard,FalcoknightClassCardFile,FalcoknightClassCardPalette)
+
+
+SeraphKnightClassCardFile:
+#incbin "Dmp/SeraphKnight.dmp"
+
+SeraphKnightClassCardPalette:
+#incbin "Dmp/SeraphKnight.png_pal.dmp"
+
+setCardEntry(SeraphKnightClassCard,SeraphKnightClassCardFile,SeraphKnightClassCardPalette)
+
+
+KinshiKnightClassCardFile:
+#incbin "Dmp/KinshiKnight.dmp"
+
+KinshiKnightClassCardPalette:
+#incbin "Dmp/KinshiKnight.png_pal.dmp"
+
+setCardEntry(KinshiKnightClassCard,KinshiKnightClassCardFile,KinshiKnightClassCardPalette)
+
+
+WyvernLordClassCardFile:
+#incbin "Dmp/WyvernLord.dmp"
+
+WyvernLordClassCardPalette:
+#incbin "Dmp/WyvernLord.png_pal.dmp"
+
+setCardEntry(WyvernLordClassCard,WyvernLordClassCardFile,WyvernLordClassCardPalette)
+
+
+QilinKnightClassCardFile:
+#incbin "Dmp/QilinKnight.dmp"
+
+QilinKnightClassCardPalette:
+#incbin "Dmp/QilinKnight.png_pal.dmp"
+
+setCardEntry(QilinKnightClassCard,QilinKnightClassCardFile,QilinKnightClassCardPalette)
+
+
+ScaleguardClassCardFile:
+#incbin "Dmp/Scaleguard.dmp"
+
+ScaleguardClassCardPalette:
+#incbin "Dmp/Scaleguard.png_pal.dmp"
+
+setCardEntry(ScaleguardClassCard,ScaleguardClassCardFile,ScaleguardClassCardPalette)
+
+
+ThunderSageClassCardFile:
+#incbin "Dmp/ThunderSage.dmp"
+
+ThunderSageClassCardPalette:
+#incbin "Dmp/ThunderSage.png_pal.dmp"
+
+setCardEntry(ThunderSageClassCard,ThunderSageClassCardFile,ThunderSageClassCardPalette)
+
+
+FireSageClassCardFile:
+#incbin "Dmp/FireSage.dmp"
+
+FireSageClassCardPalette:
+#incbin "Dmp/FireSage.png_pal.dmp"
+
+setCardEntry(FireSageClassCard,FireSageClassCardFile,FireSageClassCardPalette)
+
+
+WindSageClassCardFile:
+#incbin "Dmp/WindSage.dmp"
+
+WindSageClassCardPalette:
+#incbin "Dmp/WindSage.png_pal.dmp"
+
+setCardEntry(WindSageClassCard,WindSageClassCardFile,WindSageClassCardPalette)
+
+
+WindcallerClassCardFile:
+#incbin "Dmp/Windcaller.dmp"
+
+WindcallerClassCardPalette:
+#incbin "Dmp/Windcaller.png_pal.dmp"
+
+setCardEntry(WindcallerClassCard,WindcallerClassCardFile,WindcallerClassCardPalette)
+
+
+DiabolistClassCardFile:
+#incbin "Dmp/Diabolist.dmp"
+
+DiabolistClassCardPalette:
+#incbin "Dmp/Diabolist.png_pal.dmp"
+
+setCardEntry(DiabolistClassCard,DiabolistClassCardFile,DiabolistClassCardPalette)
+
+
+ValkyrieClassCardFile:
+#incbin "Dmp/Valkyrie.dmp"
+
+ValkyrieClassCardPalette:
+#incbin "Dmp/Valkyrie.png_pal.dmp"
+
+setCardEntry(ValkyrieClassCard,ValkyrieClassCardFile,ValkyrieClassCardPalette)
+
+
+GreatLordClassCardFile:
+#incbin "Dmp/GreatLord.dmp"
+
+GreatLordClassCardPalette:
+#incbin "Dmp/GreatLord.png_pal.dmp"
+
+setCardEntry(GreatLordClassCard,GreatLordClassCardFile,GreatLordClassCardPalette)

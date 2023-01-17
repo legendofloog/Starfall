@@ -1,0 +1,10 @@
+#define Esme 1
+#define Solomin 2
+#define Oldrik 3
+#define Baeric 4
+#define Basren 5
+
+// enemies
+
+#define Chapter1Generics $6E
+#define Chapter1Boss $6F

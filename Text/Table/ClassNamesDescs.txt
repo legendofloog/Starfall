@@ -1,0 +1,377 @@
+## SwordRiderName
+Sword Rider[X]
+
+## AxeRiderName
+Axe Rider[X]
+
+## LanceRiderName
+Lance Rider[X]
+
+## BowRiderName
+Bow Rider[X]
+
+## RiderDesc
+Skilled horsemen that charge ahead[N]
+of their allies to lead the way.[X]
+
+## FreeKnightName
+Free Knight[X]
+
+## DukeKnightName
+Duke Knight[X]
+
+## GreatKnightName
+Great Knight[X]
+
+## ArchKnightName
+Arch Knight[X]
+
+## KnightDesc
+Experienced riders proficient at saving[NL]
+allies and running down their enemies.[X]
+
+## PegasusRiderName
+Pegasus Rider[X]
+
+## FalcoknightName
+Falcoknight[X]
+
+## WyvernRiderName
+Wyvern Rider[X]
+
+## DracoknightName
+Dracoknight[X]
+
+## PegasusRiderDesc
+Adept companions to pegasi that dart[N]
+about the battlefield with great speed.[X]
+
+## FalcoknightDesc
+Experienced pegasus riders that share[N]
+a powerful bond with their steed.[X]
+
+## WyvernRiderDesc
+Powerful axemen that use their command[N]
+over the air to terrorize their foes.[X]
+
+## DracoknightDesc
+Veteran dragon riders with absolute[N]
+control over the skies and their axe.[X]
+
+## GoldKnightName
+Gold Knight[X]
+
+## SilverKnightName
+Silver Knight[X]
+
+## RangerName
+Ranger[X]
+
+## MageKnightName
+Mage Knight[X]
+
+## CataphractName
+Cataphract[X]
+
+## HolyKnightName
+Holy Knight[X]
+
+## GoldSilverKnightDesc
+Mighty dragoons with great flexibility[N]
+that have honed their combat instincts.[X]
+
+## MageKnightDesc
+Pragmatic magi that forewent studying[N]
+the arcane in favor of the steed.[X]
+
+## CataphractDesc
+Heavily armored horsemen whose weighty[N]
+blows match their unrelenting defense.[X]
+
+## RangerDesc
+Adept with bow and sword, these riders[N]
+are always ready for any situation.[X]
+
+## GriffonKnightName
+Griffon Knight[X]
+
+## GriffonKnightDesc
+Riding strong yet swift griffons,[N]
+these warriors lord over the sky.[X]
+
+## KinshiKnightName
+Kinshi Knight[X]
+
+## KinshiKnightDesc
+Archers who take to the air,[N]
+felling any who fly to meet them.[X]
+
+## ScaleguardName
+Scaleguard[X]
+
+## ScaleguardDesc
+Armored air troops whose mobility[N]
+and sturdiness makes them well-feared.[X]
+
+## ArmorKnightName
+Armor Knight[X]
+
+## ArmorDescription
+Wearers of heavy plate that guard[N]
+against even the strongest attacks.[X]
+
+## GeneralName
+General[X]
+
+## GeneralDescription
+Towers of metal that lead the charge,[N]
+protecting their allies with ease.[X]
+
+## BaronName
+Baron[X]
+
+## BaronDescription
+Magi protected by thick armor that[N]
+allows them to lead the vanguard.[X]
+
+## SoldierName
+Soldier[X]
+
+## SoldierDesc
+Dutiful, well-rounded guardians that[N]
+dedicate their hearts to their cause.[X]
+
+## MercenaryName
+Mercenary[X]
+
+## MercenaryDesc
+Well-rounded swordfighters who sell[N]
+their talents in exchange for gold.[X]
+
+## FighterName
+Fighter[X]
+
+## FighterDesc
+Powerful brawlers, their mighty axe[N]
+can split heads as easily as logs.[X]
+
+## MyrmidonName
+Myrmidon[X]
+
+## MyrmidonDesc
+Students of the sword who endlessly[NL]
+strive to hone their bladework.[X]
+
+## FreelancerName
+Freelancer[X]
+
+## FreelancerDesc
+Spearmen who are only motivated[N]
+by gold and their own whims.[X]
+
+## BrigandName
+Brigand[X]
+
+## BrigandDesc
+Brutes that use their raw strength to[N]
+pillage and burn down entire villages.[X]
+
+## ArcherName
+Archer[X]
+
+## ArcherDesc
+Strong bowmen that are as confident in[NL]
+their power as they are in their aim.[X]
+
+## HunterName
+Hunter[X]
+
+## HunterDesc
+Swift archers that are familiar with[N]
+forestry and use it to their advantage.[X]
+
+## ThiefName
+Thief[X]
+
+## ThiefDesc
+Sneaky ne'er-do-wells that take any[NL]
+opportunity to ply their trade.[X]
+
+## FireMageName
+Fire Mage[X]
+
+## WindMageName
+Wind Mage[X]
+
+## ThunderMageName
+Thunder Mage[X]
+
+## MageDesc
+Aspirants that seek to use their[N]
+magical abilities to greater effect.[X]
+
+## ClericName
+Cleric[X]
+
+## ClericDesc
+Devoted believers, they show their[N]
+faith by healing the wounded and sick.[X]
+
+## HalberdierName
+Halberdier[X]
+
+## HalberdierDesc
+Righteous sentinels that protect what[N]
+they care for with their own hands.[X]
+
+## HeroName
+Hero[X]
+
+## HeroDesc
+Veteran fighters that have overcome[NL]
+countless battles, becoming legends.[X]
+
+## WarriorName
+Warrior[X]
+
+## WarriorDesc
+Tough fighters that deliver crushing[N]
+blows, whether up close or from afar.[X]
+
+## SwordmasterName
+Swordmaster[X]
+
+## SwordmasterDesc
+Ascended practicioners of the blade who[NL]
+display swordsmanship without peer.[X]
+
+## RavagerName
+Ravager[X]
+
+## RavagerDesc
+Experts of the spear that can thrust[N]
+through steel as easily as flesh.[X]
+
+## BerserkerName
+Berserker[X]
+
+## BerserkerDesc
+Savants of the axe who descend into[N]
+a mad rage in the heat of battle.[X]
+
+## SniperName
+Sniper[X]
+
+## SniperDesc
+Master marksmen who hit their targets[NL]
+as easily as they breathe or drink.[X]
+
+## AssassinName
+Assassin[X]
+
+## AssassinDesc
+Masters of subterfuge who can fend for[N]
+themselves when their schemes fail.[X]
+
+## FireSageName
+FireSage[X]
+
+## WindSageName
+WindSage[X]
+
+## ThunderSageName
+ThunderSage[X]
+
+## SageDesc
+Wise magic users well-versed in[N]
+the arcane and healing arts.[X]
+
+## BishopName
+Bishop[X]
+
+## BishopDesc
+Unmatched in their staffing prowess,[N]
+they support their allies with ease.[X]
+
+## GladiatorName
+Gladiator[X]
+
+## GladiatorDesc
+Ruthless sellswords that have acquired[N]
+thick armor to survive yet more battle.[X]
+
+## WarMonkName
+War Monk[X]
+
+## WarMonkDesc
+Clerics who fight on the frontlines[N]
+with ease as they heal their allies.[X]
+
+## SlayerName
+Slayer[X]
+
+## SlayerDesc
+Adept in both magic and blades,[N]
+their fiery sword spells doom.[X]
+
+## DragoonName
+Dragoon[X]
+
+## DragoonDesc
+Blessed by the wind, it envelops[N]
+their lance with an invisible gale.[X]
+
+## HarbingerName
+Harbinger[X]
+
+## HarbingerDesc
+With a thundering axe, these mighty[N]
+war mages strike fear in their enemies.[X]
+
+## AdventurerName
+Adventurer[X]
+
+## AdventurerDesc
+As willing to heal as to hurt,[N]
+no one can predict their next move.[X]
+
+## BallisticianName
+Ballistician[X]
+
+## BallisticianDesc
+Hunters who gave up their mobility[N]
+in favor of inescapable range.[X]
+
+## TricksterName
+Trickster[X]
+
+## TricksterDesc
+Thieves who use the wind at their back[N]
+to move deftly towards their mark.[X]
+
+## GrassrunnerName
+Grassrunner[X]
+
+## GrassrunnerDesc
+Thieves who gained yet greater reach,[N]
+swiping valuables atop their horse.[X]
+
+## LordName
+Lord[X]
+
+## LordDesc
+Adept with lance and staff,[N]
+this noble leads from the front.[X]
+
+## KnightLordName
+Knight Lord[X]
+
+## KnightLordDesc
+Lord[X]
+
+## RogueName
+Rogue[X]
+
+## RogueDesc
+Thieves who have mastered their craft,[N]
+able to steal anything they can carry.[X]
