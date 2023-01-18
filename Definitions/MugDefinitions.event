@@ -4,3 +4,18 @@
 #define GeorgiosMug 0x9
 #define AlastoreMug 0xa
 #define KorinaMug 0x14
+
+
+//class cards vanilla
+#define MyrmidonClassCard 0x72
+#define FighterClassCard 0x74
+#define ArcherClassCard 0x78
+#define PegasusRiderClassCard 0x86
+#define FalcoknightClassCard 0x87
+#define SoldierClassCard 0x8A
+#define BrigandClassCard 0x8B
+#define MercenaryClassCard 0x90
+
+//new ones
+#define FreelancerClassCard 0x100
+#define HunterClassCard 0x101

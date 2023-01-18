@@ -1,0 +1,17 @@
+#define setCardEntry(cardEntry,cardLocation,cardPaletteLocation) "PUSH; ORG PortraitTable+cardEntry*0x1C; POIN 0 0 cardPaletteLocation 0 cardLocation; POP"
+
+ALIGN 4
+FreelancerClassCardData:
+#incbin "Dmp/Militia (M) Deserter Lance {Rasdel}.dmp"
+ALIGN 4
+FreelancerClassCardPal:
+#incbin "Dmp/Militia (M) Deserter Lance {Rasdel}.png_pal.dmp"
+setCardEntry(FreelancerClassCard, FreelancerClassCardData, FreelancerClassCardPal)
+
+ALIGN 4
+HunterClassCardData:
+#incbin "Dmp/Hunter (M) {Spud}.dmp"
+ALIGN 4
+HunterClassCardPal:
+#incbin "Dmp/Hunter (M) {Spud}.png_pal.dmp"
+setCardEntry(HunterClassCard, HunterClassCardData, HunterClassCardPal)

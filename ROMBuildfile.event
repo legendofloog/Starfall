@@ -5,9 +5,7 @@
     #include "Definitions/_DefinitionsInstaller.event"
     
     ORG FreeSpace
-
-
-    #include "repointedTextTable.event"
+    #include "Tables/Repointed/_MasterRepointer.event"
 
     //Text first for Text ID definitions
     #include "Text/InstallTextData.event"
