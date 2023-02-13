@@ -2,3 +2,4 @@
 #include "Mugs/_MugInstaller.event"
 #include "Icons/_IconInstaller.event"
 #include "Tilesets/_TilesetInstaller.event"
+#include "BattleAnimations/_BattleAnimations.event"

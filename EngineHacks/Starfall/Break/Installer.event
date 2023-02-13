@@ -1,0 +1,27 @@
+//referenced from pik aftershock work in BoB
+
+#include "Break.lyn.event"
+
+ALIGN 4
+gDebuffTable:
+WORD DebuffTable
+
+PUSH
+ORG 0x2C844
+jumpToHack(New_BattleInitTargetCanCounter) //writes over current "can unit counter" function
+POP
+PROTECT 0x2C844
+
+#define BreakTargetEntry(breakerWType, brokenWType) "BYTE breakerWType brokenWType"
+#define BreakTargetTerminator "BYTE 0xFF 0xFF"
+
+#define SwordWType 0
+#define LanceWType 1
+#define AxeWType 2
+
+ALIGN 4 
+BreakTargetTable: //makes a separate table that determines WTA for breaking so that it is independent of vanilla WTA
+BreakTargetEntry(SwordWType, AxeWType)
+BreakTargetEntry(AxeWType, LanceWType)
+BreakTargetEntry(LanceWType, SwordWType)
+BreakTargetTerminator

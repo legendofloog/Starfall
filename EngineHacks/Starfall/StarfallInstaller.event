@@ -3,6 +3,7 @@
 #include "ModularMinimugBox-master/Installers/MMBInstallerBellsOfByelen.event"
 #include "GroupAI/GroupAI.event"
 #include "Music/MusicAsmInstaller.event"
+#include "Break/Installer.event"
 //#include "FE4WeaponRanks/Installer.event"
 
 // installs thracia trade

@@ -1,7 +1,3 @@
-
-	#include "EAstdlib.event"
-	#include "Extensions/Hack Installation.txt"
-
 	#include "Internal/UI1ProcCode.event"
 
 	#include "Internal/MMBInit.lyn.event"

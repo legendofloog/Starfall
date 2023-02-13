@@ -5,9 +5,6 @@
 
 ALIGN 4
 WTTable:
-TwoWayWTEntry(Sword_WType,Axe_WType,0,0)
-TwoWayWTEntry(Lance_WType,Sword_WType,0,0)
-TwoWayWTEntry(Axe_WType,Lance_WType,0,0)
 EndWT //Terminator
 
 PUSH

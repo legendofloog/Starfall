@@ -1,0 +1,40 @@
+#define AnimTableEntry(index) "ORG ClassAnimTable + ((index-1) * 0x20)"
+#define SwordAnim(Animation) "BYTE Swords 0x01 ; SHORT Animation"
+#define SpearAnim(Animation) "BYTE Spears 0x01 ; SHORT Animation"
+#define AxeAnim(Animation) "BYTE Axes 0x01 ; SHORT Animation"
+#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation"
+#define BowAnim(Animation) "BYTE Bows 0x01 ; SHORT Animation"
+#define StaffAnim(Animation) "BYTE Staves 0x01 ; SHORT Animation"
+#define AnimaAnim(Animation) "BYTE Anima 0x01 ; SHORT Animation"
+#define LightAnim(Animation) "BYTE Light 0x01 ; SHORT Animation"
+#define DarkAnim(Animation) "BYTE Dark 0x01 ; SHORT Animation"
+#define UnarmedAnim(Animation) "BYTE Disarmed 0x01 ; SHORT Animation"
+#define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
+#define EndAnim "WORD 0x0"
+#define Unarmed Disarmed
+#define Spears Lances
+
+ALIGN 4
+SwordRiderAnims:
+SwordAnim(HorseRiderSwordAnim)
+UnarmedAnim(HorseRiderUnarmedAnim)
+EndAnim
+
+ALIGN 4
+AxeRiderAnims:
+AxeAnim(HorseRiderAxeAnim)
+HandAxeAnim(HorseRiderHandaxeAnim)
+UnarmedAnim(HorseRiderUnarmedAnim)
+EndAnim
+
+ALIGN 4
+LanceRiderAnims:
+SpearAnim(HorseRiderLanceAnim)
+UnarmedAnim(HorseRiderUnarmedAnim)
+EndAnim
+
+ALIGN 4
+BowRiderAnims:
+BowAnim(HorseRiderBowAnim)
+UnarmedAnim(HorseRiderUnarmedAnim)
+EndAnim

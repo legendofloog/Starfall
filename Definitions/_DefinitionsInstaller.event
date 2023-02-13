@@ -1,7 +1,7 @@
 #include "Undefs.event"
 #include "ItemDefinitions.event"
 #include "ClassDefinitions.event"
-#include "MugDefinitions.event"
+#include "GraphicsDefinitions.event"
 #include "ChapterDefinitions.event"
 #include "CharacterDefinitions.event"
 #include "MusicDefinitions.event"
