@@ -1,5 +1,7 @@
 //referenced from pik aftershock work in BoB
 
+#include "BreakMapDisplay/Installer.event"
+
 #include "Break.lyn.event"
 
 ALIGN 4

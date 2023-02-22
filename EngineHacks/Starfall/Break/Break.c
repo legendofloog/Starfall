@@ -107,6 +107,7 @@ void BattleGenerateHitEffects(struct BattleUnit* attacker, struct BattleUnit* de
     if (!(gBattleHitIterator->attributes & BATTLE_HIT_ATTR_MISS)) {
         if (DidUnitBreak()){
 			gDebuffTable[gBattleTarget.unit.index].skillState |= SKILLSTATE_BROKEN_IN_BATTLE;
+			gBattleHitIterator->attributes |= BATTLE_HIT_BREAK;
 		}
 		
 		switch (GetItemWeaponEffect(attacker->weapon)) {
@@ -244,3 +245,15 @@ void New_BattleInitTargetCanCounter(){;
 
 }
 
+void MapAnim_BeginBREAKAnim(struct Unit* unit)
+{
+    Decompress(
+        gGfxBreakAnim,
+        OBJ_VRAM0 + 0x20 * BM_OBJCHR_BANIM_EFFECT);
+
+    APProc_Create(
+        gAPMISSAnim,
+        16*(unit->xPos - (gGameState.cameraRealPos.x>>4)) + 8,
+        16*(unit->yPos - (gGameState.cameraRealPos.y>>4)) + 16,
+        TILEREF(BM_OBJCHR_BANIM_EFFECT, 0), 0, 2);
+}

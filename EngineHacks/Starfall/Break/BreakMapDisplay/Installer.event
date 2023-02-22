@@ -1,0 +1,13 @@
+
+ALIGN 4
+gGfxBreakAnim:
+#incbin "BreakGraphic.dmp"
+
+#include "MapAnim_BeginRoundSpecificAnims.lyn.event"
+
+
+PUSH
+ORG $8161C
+POIN NewMapAnim_BeginRoundSpecificAnims
+POP
+
