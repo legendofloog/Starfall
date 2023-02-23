@@ -17,3 +17,19 @@ POP
 
 #include "MusicEvents/BattleForTheFields(devvy).event"
 SongTable(BattleForTheFieldsID,BattleForTheFields,MapMusicGroup)
+
+#include "MusicEvents/Song_HitBreak.event"
+SongTable(BreakSFX_Hit,HitBreakSFX,SFXGroup)
+
+#include "MusicEvents/Song_KillBreak.event"
+SongTable(BreakSFX_Kill,KillBreakSFX,SFXGroup)
+
+//instrument format 
+#define Instrument(Type, RefNote, ForcedPan, SoundData, Atk, Dec, Sus, Rel) "BYTE Type RefNote 0 ForcedPan; WORD SoundData; BYTE Atk Dec Sus Rel"
+
+PUSH //adds the hit and kill direct sounds to instrument set with fimbulvetr sound
+ORG 0x212A8C
+Instrument(0, $3C, 0, 0x08330AFC, 255, 0, 255, 0)
+ORG 0x212AB0
+Instrument(0, $3C, 0, 0x083328AC, 255, 0, 255, 0)
+POP

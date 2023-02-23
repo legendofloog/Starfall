@@ -3,10 +3,14 @@
 #include "Break.h"
 
 bool DidUnitBreak(){
+	if (gDebuffTable[gBattleTarget.unit.index].skillState & SKILLSTATE_BREAK){
+		return false;
+	}
 	if ((gBattleActor.battleAttack > gBattleTarget.battleDefense)){ //did unit do damage
 		int i = 0;
 		while (BreakTargetTable[i].breakerWType != 0xFF){
 			if ((BreakTargetTable[i].breakerWType == GetItemType(gBattleActor.weaponBefore)) && (BreakTargetTable[i].brokenWType == GetItemType(gBattleTarget.weaponBefore))){
+				
 				return true;
 			}
 			i++;
@@ -52,11 +56,9 @@ void BattleUnwind(void) {
 
     // this do { ... } while (0); is required for match
     // which is kind of neat because it implies scrapped plans for supporting some accost kind of thing
-
     do {
         struct BattleUnit* attacker;
         struct BattleUnit* defender;
-
         BattleGetBattleUnitOrder(&attacker, &defender);
 
         gBattleHitIterator->info |= BATTLE_HIT_INFO_BEGIN;
@@ -106,8 +108,13 @@ void BattleGenerateHitEffects(struct BattleUnit* attacker, struct BattleUnit* de
 
     if (!(gBattleHitIterator->attributes & BATTLE_HIT_ATTR_MISS)) {
         if (DidUnitBreak()){
-			gDebuffTable[gBattleTarget.unit.index].skillState |= SKILLSTATE_BROKEN_IN_BATTLE;
-			gBattleHitIterator->attributes |= BATTLE_HIT_BREAK;
+			if (gDebuffTable[defender->unit.index].skillState & SKILLSTATE_BROKEN_IN_BATTLE){
+
+			}
+			else{
+				gDebuffTable[gBattleTarget.unit.index].skillState |= SKILLSTATE_BROKEN_IN_BATTLE;
+				gBattleHitIterator->attributes |= BATTLE_HIT_BREAK;
+			}
 		}
 		
 		switch (GetItemWeaponEffect(attacker->weapon)) {

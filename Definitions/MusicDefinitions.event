@@ -1,1 +1,3 @@
 #define BattleForTheFieldsID 0x26D
+#define BreakSFX_Hit 0x26E
+#define BreakSFX_Kill 0x26F

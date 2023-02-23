@@ -1,0 +1,58 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	HitBreakSFX_grp  0x08212564
+	#define	HitBreakSFX_pri  20
+	#define	HitBreakSFX_rev  0
+	#define	HitBreakSFX_mvl  127
+	#define	HitBreakSFX_key  0
+	#define	HitBreakSFX_tbs  1
+	#define	HitBreakSFX_exg  0
+	#define	HitBreakSFX_cmp  1
+
+	// .rodata
+	//	HitBreakSFX
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+HitBreakSFX_001:
+//  #01 //000   ----------------------------------------
+ BYTE   KEYSH   HitBreakSFX_key+0
+ BYTE   TEMPO   150*HitBreakSFX_tbs/2
+ BYTE   VOICE   110
+ BYTE   VOL   125*HitBreakSFX_mvl/mxv
+ BYTE   N24  Cn3  v127
+ BYTE   W24
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+HitBreakSFX_002:
+//  #02 //000   ----------------------------------------
+ BYTE   KEYSH   HitBreakSFX_key+0
+ BYTE   TEMPO   150*HitBreakSFX_tbs/2
+ BYTE   VOICE   50
+ BYTE   VOL   80*HitBreakSFX_mvl/mxv
+ BYTE   N12  Cn3  v127
+ BYTE   W12
+ BYTE   N11  Cn3  v096
+ BYTE   W12
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+HitBreakSFX:
+	BYTE	2	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	HitBreakSFX_pri	// Priority
+	BYTE	HitBreakSFX_rev	// Reverb.
+    
+	POIN2	HitBreakSFX_grp
+    
+	POIN2	HitBreakSFX_001
+	POIN2	HitBreakSFX_002
+
+	

@@ -1,0 +1,58 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	KillBreakSFX_grp  0x08212564
+	#define	KillBreakSFX_pri  20
+	#define	KillBreakSFX_rev  0
+	#define	KillBreakSFX_mvl  127
+	#define	KillBreakSFX_key  0
+	#define	KillBreakSFX_tbs  1
+	#define	KillBreakSFX_exg  0
+	#define	KillBreakSFX_cmp  1
+
+	// .rodata
+	//	KillBreakSFX
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+KillBreakSFX_001:
+//  #01 //000   ----------------------------------------
+ BYTE   KEYSH   KillBreakSFX_key+0
+ BYTE   TEMPO   150*KillBreakSFX_tbs/2
+ BYTE   VOICE   113
+ BYTE   VOL   102*KillBreakSFX_mvl/mxv
+ BYTE   N24  Cn3  v127
+ BYTE   W24
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+KillBreakSFX_002:
+//  #02 //000   ----------------------------------------
+ BYTE   KEYSH   KillBreakSFX_key+0
+ BYTE   TEMPO   150*KillBreakSFX_tbs/2
+ BYTE   VOICE   50
+ BYTE   VOL   80*KillBreakSFX_mvl/mxv
+ BYTE   N12  Cn3  v127
+ BYTE   W12
+ BYTE   N11  Cn3  v096
+ BYTE   W12
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+KillBreakSFX:
+	BYTE	2	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	KillBreakSFX_pri	// Priority
+	BYTE	KillBreakSFX_rev	// Reverb.
+    
+	POIN2	KillBreakSFX_grp
+    
+	POIN2	KillBreakSFX_001
+	POIN2	KillBreakSFX_002
+
+	

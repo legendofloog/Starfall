@@ -8,21 +8,21 @@
 .endm
 
 
-.global NewMapAnim_BeginRoundSpecificAnims
-.type NewMapAnim_BeginRoundSpecificAnims, %function
+.global MapAnim_BeginRoundSpecificAnims
+.type MapAnim_BeginRoundSpecificAnims, %function
 
-NewMapAnim_BeginRoundSpecificAnims: @ 0x0808161C
+MapAnim_BeginRoundSpecificAnims: @ 0x0808161C
 	push {r4, r5, r6, r7, lr}
-	mov r7, sl
+	mov r7, r10
 	mov r6, r9
 	mov r5, r8
 	push {r5, r6, r7}
 	sub sp, #4
-	ldr r1, =0x0203e1f0 @ gCurrentMapAnimState
+	ldr r1, gMapAnimData @ gCurrentMapAnimState
 	add r0, r1, #0
 	add r0, #0x58
 	ldrb r0, [r0]	@ loads u8 at 0x58 in MapAnimState struct, the acting unit id
-	mov sl, r0	@ moves it into sl?
+	mov r10, r0	@ moves it into r10?
 	add r0, r1, #0
 	add r0, #0x5a
 	ldrh r2, [r0]	@ loads in r2, u16 at 0x5A in same struct, hit attributes
@@ -31,7 +31,7 @@ NewMapAnim_BeginRoundSpecificAnims: @ 0x0808161C
 	add r7, r1, #0	@ moves current map anim state into r7
 	cmp r0, #0
 	beq _0808164C	@ if it does not AND, skip the following part where it loads the acting unit id into r5
-	mov r5, sl
+	mov r5, r10
 	b _08081652
 _0808164C:
 	add r0, r7, #0
@@ -39,7 +39,7 @@ _0808164C:
 	ldrb r5, [r0] @ loads target ID into r5
 _08081652:
 	add r6, r7, #0		@ moves current map anim state into r6
-	mov r0, sl
+	mov r0, r10
 	lsl r4, r0, #2
 	add r0, r4, r0
 	lsl r0, r0, #2
@@ -86,7 +86,7 @@ _08081692:
 	mov r1, #0
 	ldrsb r1, [r0, r1]
 	neg r1, r1
-	mov r0, sl
+	mov r0, r10
 	blh 0x080818D8
 	b _080816C8
 _080816BA:
@@ -97,7 +97,7 @@ _080816BA:
 	add r0, r5, #0
 	blh 0x080818D8
 _080816C8:
-	ldr r6, =0x0203e1f0  @ gCurrentMapAnimState
+	ldr r6, gMapAnimData  @ gCurrentMapAnimState
 	add r4, r6, #0
 	add r4, #0x5a
 	ldrh r1, [r4]
@@ -111,7 +111,7 @@ _080816C8:
 	mov r1, #0
 	ldrsb r1, [r0, r1]
 	neg r1, r1
-	mov r0, sl
+	mov r0, r10
 	blh 0x080818D8
 _080816EA:
 	add r0, r6, #0
@@ -135,7 +135,7 @@ _080816F8:
 	mov r1, #0x10
 	ldrsb r1, [r0, r1]
 	lsl r1, r1, #4
-	ldr r0, =0x0202bcb0  @ gGameState
+	ldr r0, gGameState  @ gGameState
 	mov r2, #0xc
 	ldrsh r0, [r0, r2]
 	sub r1, r1, r0
@@ -164,7 +164,7 @@ _08081740:
 	lsl r1, r1, #0x18
 	asr r1, r1, #0x18
 	lsl r1, r1, #4
-	ldr r2, =0x0202bcb0  @ gGameState
+	ldr r2, gGameState  @ gGameState
 	mov r3, #0xc
 	ldrsh r2, [r2, r3]
 	sub r1, r1, r2
@@ -194,7 +194,7 @@ _0808178C:
 _0808178E:
 	cmp r3, #0
 	beq _080817CA
-	ldr r2, =0x0203e1f0  @ gCurrentMapAnimState
+	ldr r2, gMapAnimData  @ gCurrentMapAnimState
 	add r0, r2, #0
 	add r0, #0x5c
 	ldrb r1, [r0]
@@ -209,7 +209,7 @@ _0808178E:
 	ldr r0, [r0]
 	mov r1, #1
 	blh MapAnim_BeginWallBreakAnim
-	b _080817FA
+	b NoBreak
 _080817B8:
 	mov r6, #0xb0
 	add r0, r4, r5
@@ -218,9 +218,9 @@ _080817B8:
 	ldr r0, [r0]
 	mov r1, #0
 	blh MapAnim_BeginWallBreakAnim
-	b _080817FA
+	b NoBreak
 _080817CA:
-	ldr r2, =0x0203e1f0  @ gCurrentMapAnimState
+	ldr r2, gMapAnimData  @ gCurrentMapAnimState
 	ldr r0, [r2]
 	add r0, #0x30
 	ldrb r1, [r0]
@@ -229,7 +229,7 @@ _080817CA:
 	cmp r0, #0xa
 	bne _080817E8
 	ldr r6, _080817E4  @ 0x000003C9
-	b _080817FA
+	b NoBreak
 	.align 2, 0
 _080817E4: .4byte 0x000003C9
 _080817E8:
@@ -238,29 +238,43 @@ _080817E8:
 	ldrb r1, [r0]
 	mov r0, #2
 	and r0, r1
-	mov r6, #0xd2
+	mov r6, #0xd2	@ if the battle is not a kill, play song id 0xd2 (hit)
 	cmp r0, #0
 	beq _080817FA
-	mov r6, #0xd5
+	mov r6, #0xd5   @ if the battle is a kill, play song id 0xd5 (kill)
 _080817FA:		@ NEW CODE BEGINS HERE
-	ldr r7, =0x0203e1f0 @ gCurrentMapAnimState
+	ldr r7, gMapAnimData @ gCurrentMapAnimState
 	add r0, r7, #0
 	add r0, #0x5a
 	ldrh r1, [r0]
-	mov r0, #0x20	
+	mov r0, #1
+	lsl r0, #12		
 	and r0, r1	
-	cmp r0, #0	@ checks if it and with 0x20, an unused hit attribute now used for Break
+	cmp r0, #0	@ checks if it ands with 1 << 17, an unused hit attribute now used for Break
 	bne BreakTime
 	b NoBreak
 BreakTime:
+	cmp r6, #0xd2	@ is this a normal break via hit, or kill?
+	beq BreakKill	@ if it isn't a hit, branch to kill stuff
+	mov r6, #0x26
+	lsl r6, #4		
+	add r6, #0xE	@ shifts to 0x26E, where I put the break hit sound
+	b BreakDisplay
+
+BreakKill:
+	mov r6, #0x26
+	lsl r6, #4	@ shifts to 0x260
+	add r6, #0xF	@ makes r6 0x26F, where I put the break kill sound
+
+BreakDisplay:
 	add r0, r4, r5
 	lsl r0, r0, #2
 	add r0, r0, r2
 	ldr r0, [r0]		@ gets the unit needed to call our Break function
 	blh MapAnim_BeginBREAKAnim	@ calls the break anim and continues
-	
+
 NoBreak:		@ Back to vanilla code
-	ldr r7, =0x0203e1f0  @ gCurrentMapAnimState
+	ldr r7, gMapAnimData  @ gCurrentMapAnimState
 	add r0, r7, #0
 	add r0, #0x5a
 	ldrh r1, [r0]
@@ -276,7 +290,7 @@ NoBreak:		@ Back to vanilla code
 	mov r1, #0x10
 	ldrsb r1, [r0, r1]
 	lsl r1, r1, #4
-	ldr r2, =0x0202bcb0  @ gGameState
+	ldr r2, gGameState  @ gGameState
 	mov r8, r2
 	mov r3, #0xc
 	ldrsh r0, [r2, r3]
@@ -288,7 +302,7 @@ NoBreak:		@ Back to vanilla code
 	add r4, r4, r6
 	ldr r5, [r4]
 	ldr r4, [sp]
-	add r4, sl
+	add r4, r10
 	lsl r4, r4, #2
 	add r0, r7, #4
 	add r0, r4, r0
@@ -325,7 +339,7 @@ _08081880:
 	mov r1, #0x10
 	ldrsb r1, [r0, r1]
 	lsl r1, r1, #4
-	ldr r0, =0x0202bcb0  @ gGameState
+	ldr r0, gGameState  @ gGameState
 	mov r2, #0xc
 	ldrsh r0, [r0, r2]
 	sub r1, r1, r0
@@ -336,7 +350,7 @@ _08081880:
 	add r4, r4, r0
 	ldr r4, [r4]
 	ldr r0, [sp]
-	add r0, sl
+	add r0, r10
 	lsl r0, r0, #2
 	add r1, r7, #4
 	add r0, r0, r1
@@ -354,11 +368,15 @@ _080818C4:
 	pop {r3, r4, r5}
 	mov r8, r3
 	mov r9, r4
-	mov sl, r5
+	mov r10, r5
 	pop {r4, r5, r6, r7}
 	pop {r0}
 	bx r0
 
 .align
 .ltorg
+gGameState:
+.long 0x0202BCB0
+gMapAnimData:
+.long 0x0203E1F0
 @
