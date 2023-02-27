@@ -1,9 +1,9 @@
 
 ALIGN 4
 gGfxBreakAnim:
-#incbin "BreakGraphic.dmp"
+#incbin "images/BreakGraphic.dmp"
 
-#include "MapAnim_BeginRoundSpecificAnims.lyn.event"
+#include "asm/MapAnim_BeginRoundSpecificAnims.lyn.event"
 
 
 

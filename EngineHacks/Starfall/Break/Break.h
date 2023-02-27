@@ -35,4 +35,7 @@ struct BreakEntry
 
 extern struct BreakEntry BreakTargetTable[];
 
+extern u8 BreakExemptCharacterList[];
+extern u8 BreakExemptClassList[];
+
 //break stuff

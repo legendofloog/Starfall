@@ -118,7 +118,6 @@
 #define Chapter1PaletteID 0x89
 #define Chapter1ConfigID 0x8A
 #define Chapter1TileAnimationsID 0x8B
-
 /*
 
 // ObjectType 

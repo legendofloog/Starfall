@@ -27,3 +27,11 @@ BreakTargetEntry(SwordWType, AxeWType)
 BreakTargetEntry(AxeWType, LanceWType)
 BreakTargetEntry(LanceWType, SwordWType)
 BreakTargetTerminator
+
+ALIGN 4
+BreakExemptCharacterList:
+BYTE 0
+
+ALIGN 4
+BreakExemptClassList:
+BYTE 0

@@ -1,5 +1,5 @@
 #include "MapSprites/_MapSpriteInstaller.event"
 #include "Mugs/_MugInstaller.event"
 #include "Icons/_IconInstaller.event"
-#include "Tilesets/_TilesetInstaller.event"
+#include "Tilesets/_Tileset_and_Animations_Installer.event"
 #include "BattleAnimations/_BattleAnimations.event"

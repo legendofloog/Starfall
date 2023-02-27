@@ -6,6 +6,20 @@ bool DidUnitBreak(){
 	if (gDebuffTable[gBattleTarget.unit.index].skillState & SKILLSTATE_BREAK){
 		return false;
 	}
+	int j = 0;
+	while (BreakExemptCharacterList[j] != 0){
+		if (BreakExemptCharacterList[j] == gBattleTarget.unit.pCharacterData->number){
+			return false; //if target's char ID is on exempt list, no break allowed
+		}
+		j++;
+	}
+	int k = 0;
+	while (BreakExemptClassList[k] != 0){
+		if (BreakExemptClassList[k] == gBattleTarget.unit.pClassData->number){
+			return false; //if target's class ID is on exempt list, no break allowed
+		}
+		k++;
+	}
 	if ((gBattleActor.battleAttack > gBattleTarget.battleDefense)){ //did unit do damage
 		int i = 0;
 		while (BreakTargetTable[i].breakerWType != 0xFF){
@@ -263,4 +277,60 @@ void MapAnim_BeginBREAKAnim(struct Unit* unit)
         16*(unit->xPos - (gGameState.cameraRealPos.x>>4)) + 8,
         16*(unit->yPos - (gGameState.cameraRealPos.y>>4)) + 16,
         TILEREF(BM_OBJCHR_BANIM_EFFECT, 0), 0, 2);
+}
+
+s8 CanUnitUseWeapon(Unit* unit, Item item) {
+    if (item.number == 0 && item.durability == 0){
+		return FALSE;
+	}
+
+	if (gDebuffTable[unit->index].skillState & SKILLSTATE_BREAK){
+		return FALSE;
+	}
+
+    if (!(GetItemAttributes(item) & IA_WEAPON))
+        return FALSE;
+
+    if (GetItemAttributes(item) & IA_LOCK_ANY) {
+        // Check for item locks
+
+        if ((GetItemAttributes(item) & IA_LOCK_1) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_1))
+            return FALSE;
+
+        if ((GetItemAttributes(item) & IA_LOCK_4) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_4))
+            return FALSE;
+
+        if ((GetItemAttributes(item) & IA_LOCK_5) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_5))
+            return FALSE;
+
+        if ((GetItemAttributes(item) & IA_LOCK_6) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_6))
+            return FALSE;
+
+        if ((GetItemAttributes(item) & IA_LOCK_7) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_7))
+            return FALSE;
+
+        if ((GetItemAttributes(item) & IA_LOCK_2) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_2))
+            return FALSE;
+
+        // Monster lock is special
+        if (GetItemAttributes(item) & IA_LOCK_3) {
+            if (!(UNIT_CATTRIBUTES(unit) & CA_LOCK_3))
+                return FALSE;
+
+            return TRUE;
+        }
+
+        if (GetItemAttributes(item) & IA_UNUSABLE)
+            if (!(IsItemUnsealedForUnit(unit, item)))
+                return FALSE;
+    }
+
+    if ((unit->statusIndex == UNIT_STATUS_SILENCED) && (GetItemAttributes(item) & IA_MAGIC)){
+		return FALSE;
+	}
+        
+    int wRank = GetItemRequiredExp(item);
+    int uRank = (unit->ranks[GetItemType(item)]);
+
+    return (uRank >= wRank) ? TRUE : FALSE;
 }

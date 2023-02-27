@@ -690,11 +690,11 @@ TricksterMMS:
 
 ALIGN 4
 GrassrunnerSMS:
-#incbin "Dmp/Nomad Trooper (M) {IS}-stand.dmp"
+#incbin "Dmp/Grassrunner_Stand(ArcherBias).dmp"
 
 ALIGN 4
 GrassrunnerMMS:
-#incbin "Dmp/Nomad Trooper (M) {IS}-walk.dmp"
+#incbin "Dmp/Grassrunner_Move(ArcherBias).dmp"
 
 ALIGN 4
 LordSMS:

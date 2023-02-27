@@ -1,42 +1,48 @@
-//EventPointerTable(0x54, FlasubanVillageTileAnimations)
 #define tilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
-/*
-EventPointerTable(FlasubanVillageTileAnimationsID, FlasubanVillageTileAnimations)
+
+EventPointerTable(Chapter1TileAnimationsID, ZoraFieldsTileAnimations)
+
 
 ALIGN 4
-FlasubanVillageTileAnimations0:
-#incbin "TilesetAnimations/FlasubanVillage/snowvillageanims000.dmp"
-ALIGN 4
-FlasubanVillageTileAnimations1:
-#incbin "TilesetAnimations/FlasubanVillage/snowvillageanims001.dmp"
-ALIGN 4
-FlasubanVillageTileAnimations2:
-#incbin "TilesetAnimations/FlasubanVillage/snowvillageanims002.dmp"
-ALIGN 4
-FlasubanVillageTileAnimations3:
-#incbin "TilesetAnimations/FlasubanVillage/snowvillageanims003.dmp"
-ALIGN 4
-FlasubanVillageTileAnimations4:
-#incbin "TilesetAnimations/FlasubanVillage/snowvillageanims004.dmp"
-ALIGN 4
-FlasubanVillageTileAnimations5:
-#incbin "TilesetAnimations/FlasubanVillage/snowvillageanims005.dmp"
-ALIGN 4
-FlasubanVillageTileAnimations6:
-#incbin "TilesetAnimations/FlasubanVillage/snowvillageanims006.dmp"
-ALIGN 4
-FlasubanVillageTileAnimations7:
-#incbin "TilesetAnimations/FlasubanVillage/snowvillageanims007.dmp"
+ZoraFieldsTileAnimations0:
+#incbin "Anims/ZoraFields/tile_animasinos.mapanime_1_000.dmp"
 
 ALIGN 4
-FlasubanVillageTileAnimations:
-tilesetAnimation(0x1C,0x1000,FlasubanVillageTileAnimations0)
-tilesetAnimation(0x1C,0x1000,FlasubanVillageTileAnimations1)
-tilesetAnimation(0x1C,0x1000,FlasubanVillageTileAnimations2)
-tilesetAnimation(0x1C,0x1000,FlasubanVillageTileAnimations3)
-tilesetAnimation(0x1C,0x1000,FlasubanVillageTileAnimations4)
-tilesetAnimation(0x1C,0x1000,FlasubanVillageTileAnimations5)
-tilesetAnimation(0x1C,0x1000,FlasubanVillageTileAnimations6)
-tilesetAnimation(0x1C,0x1000,FlasubanVillageTileAnimations7)
+ZoraFieldsTileAnimations1:
+#incbin "Anims/ZoraFields/tile_animasinos.mapanime_1_001.dmp"
+
+ALIGN 4
+ZoraFieldsTileAnimations2:
+#incbin "Anims/ZoraFields/tile_animasinos.mapanime_1_002.dmp"
+
+ALIGN 4
+ZoraFieldsTileAnimations3:
+#incbin "Anims/ZoraFields/tile_animasinos.mapanime_1_003.dmp"
+
+ALIGN 4
+ZoraFieldsTileAnimations4:
+#incbin "Anims/ZoraFields/tile_animasinos.mapanime_1_004.dmp"
+
+ALIGN 4
+ZoraFieldsTileAnimations5:
+#incbin "Anims/ZoraFields/tile_animasinos.mapanime_1_005.dmp"
+
+ALIGN 4
+ZoraFieldsTileAnimations6:
+#incbin "Anims/ZoraFields/tile_animasinos.mapanime_1_006.dmp"
+
+ALIGN 4
+ZoraFieldsTileAnimations7:
+#incbin "Anims/ZoraFields/tile_animasinos.mapanime_1_007.dmp"
+
+ALIGN 4
+ZoraFieldsTileAnimations:
+tilesetAnimation(16,0x1000,ZoraFieldsTileAnimations0)
+tilesetAnimation(16,0x1000,ZoraFieldsTileAnimations1)
+tilesetAnimation(16,0x1000,ZoraFieldsTileAnimations2)
+tilesetAnimation(16,0x1000,ZoraFieldsTileAnimations3)
+tilesetAnimation(16,0x1000,ZoraFieldsTileAnimations4)
+tilesetAnimation(16,0x1000,ZoraFieldsTileAnimations5)
+tilesetAnimation(16,0x1000,ZoraFieldsTileAnimations6)
+tilesetAnimation(16,0x1000,ZoraFieldsTileAnimations7)
 WORD 0 0
-*/
