@@ -62,7 +62,7 @@ UNIT
 EnemyUnits1:
 UNIT Chapter1Generics Brigand 0x0 Level(1,Enemy,True) [6,18] 0x0 0x0 0x0 0x0 [IronAxe] GroupOneAI
 UNIT Chapter1Generics Mercenary 0x0 Level(1,Enemy,True) [7,18] 0x0 0x0 0x0 0x0 [IronSword] GroupOneAI
-UNIT Chapter1Generics Freelancer 0x0 Level(1,Enemy,True) [5,20] 0x0 0x0 0x0 0x0 [Horseslayer] GroupOneAI
+UNIT Chapter1Generics Freelancer 0x0 Level(1,Enemy,True) [5,20] 0x0 0x0 0x0 0x0 [IronLance] GroupOneAI
 
 UNIT Chapter1Generics Archer 0x0 Level(1,Enemy,True) [8,13] 0x0 0x0 0x0 0x0 [IronBow] GroupTwoAI
 UNIT Chapter1Generics Myrmidon 0x0 Level(1,Enemy,True) [10,11] 0x0 0x0 0x0 0x0 [IronSword] GroupTwoAI
