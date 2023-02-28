@@ -1,4 +1,19 @@
-void DisplayUnitAdditionalBlinkingIcons(void) {
+#include "MapDisplay.h"
+
+void MapAnim_BeginBREAKAnim(struct Unit* unit)
+{
+    Decompress(
+        gGfxBreakAnim,
+        OBJ_VRAM0 + 0x20 * BM_OBJCHR_BANIM_EFFECT);
+
+    APProc_Create(
+        gAPMISSAnim,
+        16*(unit->xPos - (gGameState.cameraRealPos.x>>4)) + 8,
+        16*(unit->yPos - (gGameState.cameraRealPos.y>>4)) + 16,
+        TILEREF(BM_OBJCHR_BANIM_EFFECT, 0), 0, 2);
+}
+
+/*void DisplayUnitAdditionalBlinkingIcons(void) {
     u8 protectCharacterId;
     int i;
     int x;
@@ -189,4 +204,4 @@ void DisplayUnitAdditionalBlinkingIcons(void) {
     }
 
     return;
-}
+}*/

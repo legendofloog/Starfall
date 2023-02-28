@@ -1,12 +1,8 @@
 //referenced from pik aftershock work in BoB
 
-#include "BreakMapDisplay/Installer.event"
+#include "MapDisplay/Installer.event" //for asm stuff that isn't decomped
 
 #include "Break.lyn.event"
-
-ALIGN 4
-gDebuffTable:
-WORD DebuffTable
 
 PUSH
 ORG 0x2C844
@@ -35,3 +31,17 @@ BYTE 0
 ALIGN 4
 BreakExemptClassList:
 BYTE 0
+
+//skillsys stuff
+
+ALIGN 4
+gDebuffTable:
+WORD DebuffTable
+
+ALIGN 4
+gSkillTester:
+POIN SkillTester
+
+ALIGN 4
+DazzleIDLink:
+BYTE DazzleID

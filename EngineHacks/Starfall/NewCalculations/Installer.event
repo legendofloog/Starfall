@@ -1,10 +1,6 @@
 #include "NewCalculations.lyn.event"
 
 ALIGN 4
-gSkillTester:
-POIN SkillTester+1
-
-ALIGN 4
 gExtra_Growth_Boosts:
 POIN Extra_Growth_Boosts|1
 
