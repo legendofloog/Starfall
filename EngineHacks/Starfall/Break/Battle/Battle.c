@@ -56,7 +56,7 @@ void BattleGenerateHitEffects(struct BattleUnit* attacker, struct BattleUnit* de
     attacker->wexpMultiplier++;
 
     if (!(gBattleHitIterator->attributes & BATTLE_HIT_ATTR_MISS)) {
-        if (DidUnitBreak()){
+        if (DidUnitBreak() && (attacker->unit.pCharacterData->number == gBattleActor.unit.pCharacterData->number)){
 			if (gDebuffTable[defender->unit.index].skillState & SKILLSTATE_BROKEN_IN_BATTLE){
 
 			}

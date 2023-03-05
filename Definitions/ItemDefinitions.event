@@ -9,7 +9,7 @@
 #define Fire_WType 7
 
 //#define IronSword 0x01
-#define ArcSword 0x02
+#define BronzeSword 0x02
 //#define SteelSword 0x03
 //#define SilverSword 0x04
 //#define IronBlade 0x05
@@ -58,6 +58,10 @@
 #define Manakiller 0x35
 #define ArcaneBow 0x36
 #define BreakArc 0x37
+#define Wind 0x38
+
+#define Soothe 0x5A
+
 
 //#define HeroCrest 0x64
 #define KnightProof 0x65

@@ -1,3 +1,7 @@
 #define BattleForTheFieldsID 0x26D
 #define BreakSFX_Hit 0x26E
 #define BreakSFX_Kill 0x26F
+#define FirstCampaignID 0x270
+#define FFTAnxietyID 0x271
+#define RomancingSagaBattle1ID 0x272
+#define ToS_SheenaThemeID 0x273

@@ -1,4 +1,4 @@
-
+/*
 ALIGN 16
 EsmeMugData:
 #incbin "Dmp/Esme_mug.dmp"
@@ -46,3 +46,4 @@ KorinaMugData:
 #incbin "Dmp/Korina_palette.dmp"
 #incbin "Dmp/Korina_minimug.dmp"
 setMugEntry(KorinaMug, KorinaMugData, 3, 5, 3, 3)
+*/

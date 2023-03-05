@@ -166,19 +166,19 @@ int GetBattleUnitStaffExp(BattleUnit* actor){
 
 	const ItemData* staffData = GetItemData(actor->weapon.number);
 	int staffRank = staffData->weaponRank;
-	if( staffRank == 1 ){ // e rank
+	if( staffRank == E_RANK ){ // e rank
 		return 20;
 	}
-	else if( staffRank == 51 ){ // d rank
+	else if( staffRank == D_RANK ){ // d rank
 		return 25;
 	}
-	else if( staffRank == 101){ // c rank
+	else if( staffRank == C_RANK){ // c rank
 		return 30;
 	} 
-	else if( staffRank == 151){ // b rank
+	else if( staffRank == B_RANK){ // b rank
 		return 35;
 	}
-	else if( staffRank == 201 ){ // a rank
+	else if( staffRank == A_RANK ){ // a rank
 		return 40;
 	}
 	else{ // s rank
@@ -188,6 +188,45 @@ int GetBattleUnitStaffExp(BattleUnit* actor){
 
 void ComputeBattleUnitWeaponRankBonuses(struct BattleUnit* bu) {
     return;
+}
+
+int GetUnitItemHealAmount(struct Unit* unit, Item item) {
+    int result = 0;
+
+    switch (GetItemIndex(item)) {
+
+    case ITEM_STAFF_SOOTHE:
+		result = 5;
+		break;
+
+	case ITEM_STAFF_HEAL:
+    case ITEM_STAFF_PHYSIC:
+    case ITEM_STAFF_FORTIFY:
+        result = 10;
+        break;
+
+	case ITEM_VULNERARY:
+		result = 15;
+		break;
+
+    case ITEM_STAFF_MEND:
+        result = 20;
+        break;
+
+    case ITEM_ELIXIR:
+        result = 80;
+        break;
+
+    } // switch (GetItemIndex(item))
+
+    if (GetItemAttributes(item) & IA_STAFF) {
+        result += GetUnitPower(unit);
+
+        if (result > 80)
+            result = 80;
+    }
+
+    return result;
 }
 
 void ApplyUnitPromotion(Unit* unit, u8 classId) {

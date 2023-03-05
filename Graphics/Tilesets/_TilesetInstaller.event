@@ -1,4 +1,4 @@
-//Thracia Castle
+//Zora Fields, Chapter 1 (ZoramineFae)
     ALIGN 4
     Chapter1Object:
     #incbin "Object/Autumn_Thracia_Mix2.dmp"
@@ -11,7 +11,24 @@
     Chapter1MapchipConfig:
     #incbin "Config/new_mapchip_chapter1_comp.dmp"
 
+//Zora Fields Village, Chapter 2 (ZoramineFae)
+    ALIGN 4
+    Chapter2Object:
+    #incbin "Object/Ch2_FieldsVillage.dmp"
+
+    ALIGN 4
+    Chapter2Palette:
+    #incbin "Palette/Ch2_FieldsVillage_pal.dmp"
+
+    ALIGN 4
+    Chapter2MapchipConfig:
+    #incbin "Config/Fields Village Mapchip Config_comp.dmp"
+
     EventPointerTable(Chapter1ObjectID,Chapter1Object)
     EventPointerTable(Chapter1PaletteID,Chapter1Palette)
     EventPointerTable(Chapter1ConfigID,Chapter1MapchipConfig)
-  
+    EventPointerTable(Chapter2ObjectID,Chapter2Object)
+    EventPointerTable(Chapter2PaletteID,Chapter2Palette)
+    EventPointerTable(Chapter2ConfigID,Chapter2MapchipConfig)
+
+    

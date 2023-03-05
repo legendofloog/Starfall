@@ -9,6 +9,7 @@
 #define SlowSpeed 1
 #define LordDeathConditionGameOver "AFEV 0 GameOverStart 0x65"
 
+#define GotoTitleScreen "MNTS 0x0"
 
 #define PreventSkipping "EVBIT_MODIFY 1"
 #define AllowSkipping "EVBIT_MODIFY 0"

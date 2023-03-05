@@ -4,6 +4,7 @@
 #include "GroupAI/GroupAI.event"
 #include "Music/MusicAsmInstaller.event"
 #include "Break/Installer.event"
+#include "FE8-Text_Engine_Rework/_FE8-Text_Engine_Rework_EA.event"
 //#include "FE4WeaponRanks/Installer.event"
 
 // installs thracia trade

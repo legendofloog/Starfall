@@ -15,14 +15,27 @@ POP
 #define MapMusicGroup 1
 #define SFXGroup 6
 
+//hanging out
 #include "MusicEvents/BattleForTheFields(devvy).event"
 SongTable(BattleForTheFieldsID,BattleForTheFields,MapMusicGroup)
 
+//used for break
 #include "MusicEvents/Song_HitBreak.event"
 SongTable(BreakSFX_Hit,HitBreakSFX,SFXGroup)
-
 #include "MusicEvents/Song_KillBreak.event"
 SongTable(BreakSFX_Kill,KillBreakSFX,SFXGroup)
+
+//used in chapter 1
+#include "MusicEvents/RomancingSaGaBattle.event"
+SongTable(RomancingSagaBattle1ID,song01,MapMusicGroup)
+#include "MusicEvents/TS_FirstCampaign(devvy).event"
+SongTable(FirstCampaignID,FirstCampaign,MapMusicGroup)
+#include "MusicEvents/Final Fantasy Tactics - Anxiety (Alusq).event"
+SongTable(FFTAnxietyID,FFT_Anxiety,MapMusicGroup)
+#include "MusicEvents/Tales of Symphonia - Sheena's Theme {Leche}.event"
+SongTable(ToS_SheenaThemeID, songShihna, MapMusicGroup)
+
+
 
 //instrument format 
 #define Instrument(Type, RefNote, ForcedPan, SoundData, Atk, Dec, Sus, Rel) "BYTE Type RefNote 0 ForcedPan; WORD SoundData; BYTE Atk Dec Sus Rel"

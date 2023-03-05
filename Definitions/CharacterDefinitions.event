@@ -3,8 +3,13 @@
 #define Oldrik 3
 #define Baeric 4
 #define Basren 5
+#define Vulture 6
+#define Neritas 7
+#define Georgios 8
 
 // enemies
 
 #define Chapter1Generics $6E
 #define Chapter1Boss $6F
+#define Chapter2Generics $70
+#define Chapter2Boss $71

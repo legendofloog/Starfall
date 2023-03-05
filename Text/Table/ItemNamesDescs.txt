@@ -2,7 +2,7 @@
 Bronze Sword[X]
 
 ## BronzeSwordDesc
-Unable to make critical attacks.[X]
+ [X]
 
 ## BronzeLanceName
 Bronze Lance[X]
@@ -69,3 +69,15 @@ Iron Poleaxe[X]
 
 ## SteelPoleaxeName
 Steel Poleaxe[X]
+
+## WindName
+Wind[X]
+
+## WindDesc
+ [X]
+
+## SootheName
+Soothe[X]
+
+## SootheDesc
+A weak staff used for minor wounds.[X]

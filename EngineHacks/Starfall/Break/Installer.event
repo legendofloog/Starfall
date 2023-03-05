@@ -24,21 +24,23 @@ BreakTargetEntry(AxeWType, LanceWType)
 BreakTargetEntry(LanceWType, SwordWType)
 BreakTargetTerminator
 
-ALIGN 4
+ALIGN 4 
 BreakExemptCharacterList:
+//BYTE Lyon
 BYTE 0
 
 ALIGN 4
 BreakExemptClassList:
+//BYTE ArmorKnight
 BYTE 0
 
-//skillsys stuff
+//skillsys stuff; comment out if you have it elsewhere
 
 ALIGN 4
 gDebuffTable:
 WORD DebuffTable
 
-ALIGN 4
+ALIGN 4 
 gSkillTester:
 POIN SkillTester
 
