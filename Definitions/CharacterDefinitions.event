@@ -5,7 +5,9 @@
 #define Basren 5
 #define Vulture 6
 #define Neritas 7
-#define Georgios 8
+#define Ondrej 8
+#define Alastore 9
+#define Neil 10
 
 // enemies
 

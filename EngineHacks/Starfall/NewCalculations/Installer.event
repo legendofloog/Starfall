@@ -28,3 +28,8 @@ POIN Get_Luk_Growth|1
 gGetMagGrowth:
 POIN Get_Mag_Growth|1
 
+//Sets Vulnerary HP Recovery to 15hp.
+PUSH
+ORG 0x2FEC6
+BYTE 0x0F
+POP

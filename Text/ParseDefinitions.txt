@@ -10,12 +10,15 @@
 [Blink] = [CloseEyes][.][OpenEyes]
 [AA] = [.....][A]
 [.A] = [.....][A]
+[.4N] = [....][N]
+[.5N] = [.....][N]
 [.4] = [....]
 [.5] = [.....]
 [.6] = [......]
 [.7] = [.......]
 [Beat] = [ToggleMouthMove]...[.4][ToggleMouthMove]
 [Event] = [LoadOverworldFaces]
+[OpenQuote] = [0x93]
 
 [FarFarLeft] = [OpenFarFarLeft]
 [FarLeft] = [OpenFarLeft]
@@ -48,15 +51,17 @@
 
 [CurrentPortrait] = [0xFF][0xFF]
 
+[LoadActive] = [LoadFace][CurrentPortrait]
+
 [LoadEsme] = [LoadFace][0x2][0x1]
 [LoadSolomin] = [LoadFace][0x4][0x1]
 [LoadOldrik] = [LoadFace][0x5][0x1]
 [LoadBasren] = [LoadFace][0x6][0x1]
 [LoadBaeric] = [LoadFace][0x7][0x1]
 
-[LoadNeritas] = [LoadFace][0x8][0x1]
-[LoadVulture] = [LoadFace][0x9][0x1]
-[LoadGeorgios] = [LoadFace][0xa][0x1]
+[LoadVulture] = [LoadFace][0x8][0x1]
+[LoadNeritas] = [LoadFace][0x9][0x1]
+[LoadOndrej] = [LoadFace][0xa][0x1]
 
 [LoadAlastore] = [LoadFace][0xc][0x1]
 
@@ -73,6 +78,8 @@
 
 [LoadStarborn] = [LoadFace][0x6A][0x1]
 [LoadStarbornBoss] = [LoadFace][0x6A][0x1]
+
+[LoadChapter2Boss] = [LoadStarbornBoss]
 
 [BoxHeight] = [0x80][0x2B]
 [1LB] = [BoxHeight][0x01]

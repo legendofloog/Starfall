@@ -10,6 +10,7 @@
 #define LordDeathConditionGameOver "AFEV 0 GameOverStart 0x65"
 
 #define GotoTitleScreen "MNTS 0x0"
+#define GotoNextChapter(chapterId) "MNC2 chapterId"
 
 #define PreventSkipping "EVBIT_MODIFY 1"
 #define AllowSkipping "EVBIT_MODIFY 0"
@@ -127,4 +128,4 @@
 #define HalfMoveAI [0xC,0x0,0x0,0x0]
 #define AttackThenLootAI [0x00, 0x04, 0x04, 0x00]
 #define DoNotAttack07AI [0x07, 0x0A, 0x04, 0x00]
-
+#define AttackOnlyInRangeAI [0, 3, 4, 0]

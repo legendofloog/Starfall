@@ -5,11 +5,11 @@ None,0,0
 0x03 Oldrik,5,30
 0x04 Baeric,1,10
 0x05 Basren,0,5
-Vanessa,2,25
-Ross,0,5
-Neimi,2,15
-Colm,1,10
-Garcia,0,5
+0x06 Vulture,3,50
+0x07 Neritas,0,10
+0x08 Ondrej,(-1),5
+0x09 Alastore,4,60
+0x0A Neil,2,25
 Innes,1,10
 Lute,5,65
 Natasha,1,60

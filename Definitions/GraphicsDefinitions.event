@@ -17,11 +17,18 @@
 #define OldrikMug 0x5
 #define BasrenMug 0x6
 #define BaericMug 0x7 
-#define AlastoreMug 0xa
+#define VultureMug 0x8
+#define NeritasMug 0x9
+#define OndrejMug 0xa
+#define AlastoreMug 0xc
 #define KorinaMug 0x14
 
 //background ids
+#define HouseInterior1 0x0
+#define HouseInterior2 0x1
+#define VillageRoadDay 0x03
 #define SunsetForest 0x1F
+
 
 
 //class cards vanilla

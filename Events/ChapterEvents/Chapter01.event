@@ -110,7 +110,7 @@ UNIT
 
 EnemyUnits4:
 UNIT Chapter1Generics Brigand 0x0 Level(1,Enemy,True) [9,13] 0x0 0x0 1 REDA6R18 [IronAxe] GroupOneAI
-UNIT Chapter1Generics Mercenary 0x0 Level(1,Enemy,True) [9,13] 0x0 0x0 1 REDA7R18 [IronSword] GroupOneAI
+UNIT Chapter1Generics Mercenary 0x0 Level(1,Enemy,True) [9,13] 0x0 0x0 1 REDA7R18 [SteelSword] GroupOneAI
 UNIT Chapter1Generics Freelancer 0x0 Level(1,Enemy,True) [9,13] 0x0 0x0 1 REDA5R20 [IronLance] GroupOneAI
 UNIT
 
@@ -236,6 +236,6 @@ SetBackground(SunsetForest)
 MUSC ToS_SheenaThemeID
 Text(Ch1EndingScene2)
 SystemText(Ch1EndingNarration)
-GotoTitleScreen
+GotoNextChapter(Chapter2)
 NoFade
 ENDA

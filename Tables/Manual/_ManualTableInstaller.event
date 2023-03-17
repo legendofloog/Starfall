@@ -1,2 +1,19 @@
 #include "ClassMovementCosts.event"
 #include "WTEditor.event"
+
+ALIGN 4
+BattleQuoteTable:
+#include "Battle_Quote_Table.event"
+
+ALIGN 4
+DeathQuoteTable:
+#include "Death_Quote_Table.event"
+
+PUSH
+ORG $8472C
+POIN DeathQuoteTable
+
+ORG $846AC
+POIN BattleQuoteTable
+
+POP

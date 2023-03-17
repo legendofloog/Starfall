@@ -43,3 +43,38 @@ a banner. Show no signs of reason.[X]
 ## Chapter1BossDesc
 The leader of an unknown force.[N]
 Feral beyond reason.[X]
+
+## NeritasName
+Neritas[X]
+
+## NeritasDesc
+A soldier of House Tsezar, they protect[N]
+their lord and allies alike with pride.[X]
+
+## VultureName
+Vulture[X]
+
+## VultureDesc
+A skilled healer who plys her skill[N]
+for coin. An acquaintance of Solomin.[X]
+
+## OndrejName
+Ondrej[X]
+
+## OndrejDesc
+A fiery man who became a soldier after[N]
+his wife died. Eager to prove himself.[X]
+
+## AlastoreName
+Alastore[X]
+
+## AlastoreDesc
+Duke of the once mighty House Tsezar.[N]
+Knowledgeable in the ways of the arcane.[X]
+
+## NeilName
+Neil[X]
+
+## NeilDesc
+Retainer of Duke Tsezar. Formerly a[N]
+criminal, he loyally serves his liege.[X]

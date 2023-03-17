@@ -1,5 +1,6 @@
 #include "Ch01.txt"
 #include "Ch02.txt"
+#include "Ch03.txt"
 #include "Ch05.txt"
 #include "Ch07.txt"
 #include "ChapterTitles.txt"

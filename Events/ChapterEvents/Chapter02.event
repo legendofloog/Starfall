@@ -1,24 +1,41 @@
-﻿//Made by Camtech075 of SerenesForest
-//Modified by Nintenlord
+﻿EventPointerTable(Chapter2Events, PointerList)
 
-#include EAstdlib.event
-
-EventPointerTable(Chapter2Events,ThisChapter)
-
-ThisChapter:
+PointerList:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
 POIN LocationBasedEvents
 POIN MiscBasedEvents
-POIN Dunno Dunno Dunno
-POIN Tutorial
-POIN TrapData TrapData
-POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0, NeritasWarning,1)
+TurnEventPlayer(0, BossCharges, 8)
 END_MAIN
+
+NeritasWarning:
+SystemText(C2NeritasText)
+NoFade
+ENDA
+
+BossCharges:
+CHECK_EXISTS Chapter2Boss
+BEQ 778 s0 sC
+    CameraCursor(Chapter2Boss)
+    Text(Chapter2BossChargeText)
+    CameraCursor(Esme)
+    Text(Chapter2BossChargeResponseText)
+    SetAI(Chapter2Boss,0,0,4,0) //boss charges
+    CHECK_EXISTS Chapter2Generics
+    BEQ 778 s0 sC //if none exist, end
+        SetAI(Chapter2Generics,0,0,4,0) //if generics still around, they charge too
+LABEL 778
+NoFade
+ENDA
  
 CharacterBasedEvents:
 END_MAIN
@@ -32,94 +49,182 @@ END_MAIN
 //Label Location Events
 //need to setup tile changes on map
 Village1:
-VillageEventItem(C2VillageText,Village,RedGem)
+VillageEventItem(C2VillageText,HouseInterior2,Barrier)
 
 //We forgot to put keys in item table, put back later
 Ch2Vendor:
-SHLI Wind Fire Thunder Soothe Heal Vulnerary //DoorKey ChestKey
+SHLI Soothe Heal Vulnerary
 BYTE 0x0 0x0
 ALIGN 4
 
 Ch2Armory:
-SHLI BronzeSword BronzeLance BronzeAxe BronzeBow 
+SHLI IronSword SteelSword IronAxe SteelAxe IronLance SteelLance IronBow SteelBow
 BYTE 0x0 0x0
 ALIGN 4
 
 MiscBasedEvents:
-DefeatBoss(EndingScene)
+DefeatAll(EndingScene)
 CauseGameOverIfLordDies
 AREA 0xA PureWaterDesertTreasure [1, 1] [1, 1] // 100% chance to get PureWater if wait in space 
 END_MAIN
-
-Dunno:
-END_MAIN
-
-Tutorial:
-END_MAIN
-
-TrapData:
-ENDTRAP
-
-ALIGN 4
-
-Units:
-UNIT Esme Lord 0x00 Level(1, Ally, 0) [16,0] 0x00 0x00 0x0 0x00 [IronLance, Heal, Vulnerary] NoAI
-UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [16,1] 0x00 0x00 0x0 0x00 [IronSword] NoAI
-UNIT Oldrik LanceRider 0x00 Level(1, Ally, 0) [17,0] 0x00 0x00 0x0 0x00 [IronLance, Vulnerary] NoAI
-UNIT Baeric SwordRider 0x00 Level(1, Ally, 0) [17,1] 0x00 0x00 0x0 0x00 [IronSword, Vulnerary] NoAI
-UNIT Basren BowRider 0x01 Level(1, Ally, 0) [18,2] 0x00 0x00 0x0 0x00 [IronBow, IronLongbow] NoAI
-UNIT
-
-//giving georgios an iron sword because his base speed is poor enough that being stuck with an iron blade is really bad vs the Freelancer nearby - Worth either swapping enemies here or buffing Georgios
-NewPlayers:
-UNIT Neritas AxeRider Esme Level(1,Ally,False) [1,2] 0x0 0x0 0x0 0x0 [BronzeAxe] NoAI
-UNIT Vulture Cleric Esme Level(1,Ally,False) [0,3] 0x0 0x0 0x0 0x0 [Heal,LightRune,Vulnerary] NoAI
-UNIT Georgios Mercenary Esme Level(1,Ally,False) [3,3] 0x0 0x0 0x0 0x0 [IronSword] NoAI
-UNIT
-
-EnemyUnits:
-UNIT Chapter2Boss WindMage 0 Level(5,Enemy,False) [3,16] 0x0 0x0 0x0 0x0 [Wind,GoddessIcon] AttackInRangeAI // stealable
-UNIT Chapter2Generics Brigand   Chapter2Boss Level(1,Enemy,True) [3,17] 0x0 0x0 0x0 0x0 [BronzeAxe] BrigandAI // don't know what this is called - attack village but will prioritize player over village
-UNIT Chapter2Generics Freelancer   Chapter2Boss Level(1,Enemy,True) [2,13] 0x0 0x0 0x0 0x0 [BronzeLance] TwoActionAI
-UNIT Chapter2Generics Freelancer   Chapter2Boss Level(1,Enemy,True) [3,13] 0x0 0x0 0x0 0x0 [BronzeLance] TwoActionAI
-UNIT Chapter2Generics Myrmidon   Chapter2Boss Level(1,Enemy,True) [3,14] 0x0 0x0 0x0 0x0 [RazorEdge,RedGem] TwoActionAI
-UNIT Chapter2Generics Fighter   Chapter2Boss Level(1,Enemy,True) [3,7] 0x0 0x0 0x0 0x0 [BronzeAxe] TwoActionAI
-UNIT Chapter2Generics Freelancer   Chapter2Boss Level(1,Enemy,True) [4,8] 0x0 0x0 0x0 0x0 [IronLance] TwoActionAI
-//UNIT Chapter2Generics Archer   Chapter2Boss Level(1,Enemy,True) [0,9] 0x0 0x0 0x0 0x0 [IronBow] TwoActionAI
-UNIT Chapter2Generics FireMage   Chapter2Boss Level(1,Enemy,True) [3,11] 0x0 0x0 0x0 0x0 [Fire] AttackInRangeAI
-UNIT Chapter2Generics Archer   Chapter2Boss Level(1,Enemy,True) [9,3] 0x0 0x0 0x0 0x0 [IronBow] TwoActionAI
-UNIT
-
-EnemyUnits2:
-UNIT Chapter2Generics Myrmidon  Chapter2Boss Level(1,Enemy,True) [12,3] 0x0 0x0 0x0 0x0 [IronSword] TwoActionAI
-UNIT Chapter2Generics Fighter   Chapter2Boss Level(1,Enemy,True) [16,8] 0x0 0x0 0x0 0x0 [BronzeAxe] TwoActionAI
-UNIT Chapter2Generics Fighter   Chapter2Boss Level(1,Enemy,True) [18,8] 0x0 0x0 0x0 0x0 [BronzeAxe] TwoActionAI
-UNIT Chapter2Generics Mercenary   Chapter2Boss Level(1,Enemy,True) [13,11] 0x0 0x0 0x0 0x0 [BronzeSword] TwoActionAI
-UNIT Chapter2Generics Mercenary   Chapter2Boss Level(1,Enemy,True) [15,4] 0x0 0x0 0x0 0x0 [IronSword] TwoActionAI
-UNIT Chapter2Generics Archer   Chapter2Boss Level(1,Enemy,True) [19,11] 0x0 0x0 0x0 0x0 [BronzeBow] TwoActionAI
-UNIT Chapter2Generics FireMage   Chapter2Boss Level(1,Enemy,True) [10,16] 0x0 0x0 0x0 0x0 [Fire] TwoActionAI
-UNIT Chapter2Generics Archer   Chapter2Boss Level(1,Enemy,True) [7,12] 0x0 0x0 0x0 0x0 [BronzeBow] AttackInRangeAI
-UNIT Chapter2Generics Mercenary   Chapter2Boss Level(1,Enemy,True) [9,9] 0x0 0x0 0x0 0x0 [BronzeSword] TwoActionAI
-UNIT
 
 PureWaterDesertTreasure:
 GiveItem(PureWater,0xFFFF)
 NoFade
 ENDA
 
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+
+Units1:
+UNIT Esme Lord 0x00 Level(1, Ally, 0) [17,0] 0x00 0x00 1 REDA17R2 [IronLance, Heal, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [17,0] 0x00 0x00 1 REDA17R1 [IronSword] NoAI
+UNIT Oldrik LanceRider 0x00 Level(1, Ally, 0) [16,0] 0x00 0x00 0x0 0 [IronLance, Vulnerary] NoAI
+UNIT Baeric AxeRider 0x00 Level(1, Ally, 0) [17,0] 0x00 0x00 0x0 0 [IronSword, Vulnerary] NoAI
+UNIT Basren BowRider 0x01 Level(1, Ally, 0) [18,0] 0x00 0x00 0x0 0 [IronBow, IronLongbow] NoAI
+UNIT
+
+NewPlayers:
+UNIT Neritas SwordRider Esme Level(5,Ally,False) [1,1] 0x0 0x0 1 REDA3R3 [SteelSword, IronSword, Vulnerary] NoAI
+UNIT Vulture Cleric Esme Level(4,Ally,False) [1,1] 0x0 0x0 1 REDA2R2 [Heal,LightRune,Vulnerary] NoAI
+UNIT Ondrej Soldier Esme Level(2,Ally,False) [1,1] 0x0 0x0 1 REDA2R4 [IronLance, Vulnerary] NoAI
+UNIT
+
+EnemyUnits: // 26 enemies
+UNIT Chapter2Boss Fighter 0 Level(4,Enemy,False) [2,16] DropItem 0x0 0x0 0x0 [HandAxe] AttackOnlyInRangeAI
+
+UNIT Ondrej Soldier Esme Level(2,NPC,False) [4,1] 0x0 0x0 0x0 0x0 [IronLance, Vulnerary] NoAI
+
+UNIT Chapter2Generics Fighter   Chapter2Boss Level(2,Enemy,True) [2,17] 0x0 0x0 0x0 0x0 [IronAxe] ChargeAI
+UNIT Chapter2Generics Fighter   Chapter2Boss Level(2,Enemy,True) [4,17] 0x0 0x0 0x0 0x0 [IronAxe] ChargeAI
+
+UNIT Chapter2Generics Mercenary Chapter2Boss Level(2,Enemy,True) [1,11] 0x0 0x0 0x0 0x0 [SteelSword] GroupEightAI
+UNIT Chapter2Generics Myrmidon Chapter2Boss Level(2,Enemy,True) [3,12] 0x0 0x0 0x0 0x0 [IronSword] GroupEightAI
+
+UNIT Chapter2Generics Freelancer Chapter2Boss Level(3,Enemy,True) [2,14] 0x0 0x0 0x0 0x0 [IronLance] GroupSevenAI
+UNIT Chapter2Generics Freelancer Chapter2Boss Level(3,Enemy,True) [3,14] 0x0 0x0 0x0 0x0 [IronLance] GroupSevenAI
+
+
+UNIT Chapter2Generics Fighter   Chapter2Boss Level(2,Enemy,True) [9,3] 0x0 0x0 0x0 0x0 [SteelAxe] GroupOneAI
+UNIT Chapter2Generics Mercenary Chapter2Boss Level(2,Enemy,True) [12,1] 0 0 0 0 [IronSword] GroupOneAI
+UNIT Chapter2Generics Myrmidon Chapter2Boss Level(2,Enemy,True) [11,4] DropItem 0 0 0 [IronSword] GroupOneAI
+
+UNIT Chapter2Generics Archer Chapter2Boss Level(2,Enemy,True) [19,14] 0 0 0 0 [IronBow] ChargeAI
+
+UNIT Chapter2Generics Myrmidon  Chapter2Boss Level(2,Enemy,True) [4,11] 0x0 0x0 0x0 0x0 [IronSword] GroupTwoAI
+UNIT Chapter2Generics Freelancer   Chapter2Boss Level(2,Enemy,True) [2,10] 0x0 0x0 0x0 0x0 [IronLance] GroupTwoAI
+UNIT Chapter2Generics Soldier   Chapter2Boss Level(2,Enemy,True) [0,8] DropItem 0x0 0x0 0x0 [SteelLance] GroupTwoAI
+
+UNIT Chapter2Generics Freelancer   Chapter2Boss Level(2,Enemy,True) [19,5] 0x0 0x0 0x0 0x0 [IronLance] GroupThreeAI
+UNIT Chapter2Generics Mercenary   Chapter2Boss Level(2,Enemy,True) [17,6] 0x0 0x0 0x0 0x0 [SteelSword] GroupThreeAI
+UNIT Chapter2Generics Fighter   Chapter2Boss Level(2,Enemy,True) [18,10] 0x0 0x0 0x0 0x0 [IronAxe] GroupThreeAI
+
+UNIT Chapter2Generics Mercenary   Chapter2Boss Level(2,Enemy,True) [16,16] 0 0x0 0x0 0x0 [IronSword] GroupFourAI
+UNIT Chapter2Generics Fighter   Chapter2Boss Level(2,Enemy,True) [15,14] 0x0 0x0 0x0 0x0 [IronAxe] GroupFourAI
+
+UNIT Chapter2Generics Myrmidon   Chapter2Boss Level(2,Enemy,True) [10,8] DropItem 0x0 0x0 0x0 [RazorEdge, RedGem] GroupFiveAI
+UNIT Chapter2Generics Archer   Chapter2Boss Level(2,Enemy,True) [12,9] 0 0x0 0x0 0x0 [IronBow] GroupFiveAI
+
+UNIT Chapter2Generics Soldier Chapter2Boss Level(2,Enemy,True) [7,16] 0 0x0 0x0 0x0 [IronLance] TwoActionAI
+UNIT Chapter2Generics Archer Chapter2Boss Level(2,Enemy,True) [8,15] DropItem 0x0 0x0 0x0 [SteelBow] GroupSixAI
+UNIT Chapter2Generics Fighter Chapter2Boss Level(2,Enemy,True) [10,16] 0 0x0 0x0 0x0 [IronAxe] GroupSixAI
+UNIT Chapter2Generics Mercenary Chapter2Boss Level(2,Enemy,True) [7,13] 0 0x0 0x0 0x0 [IronSword] GroupSixAI
+UNIT
+
 BeginningScene:
-LOAD2 0x1 Units
-ENUN
 LOAD1 0x1 EnemyUnits
 ENUN
-LOAD1 0x1 EnemyUnits2
+SetBackground(VillageRoadDay)
+MUSC ToS_SheenaThemeID
+Text(Ch2StartEvent)
+FADI 10
+CAMERA [0,0]
+STAL 30
+EraseBackground
+FadeOutMusic
+CameraCursor(Ondrej)
+MOVE 15 Ondrej [1,1]
 ENUN
+REMOVEUNIT Ondrej
+SetBackground(HouseInterior1)
+MUSC Ys_DreamingID
+Text(Ch2NewPlayersJoin)
+EraseBackground
 LOAD1 0x1 NewPlayers
 ENUN
+CamOn
+LOAD2 0x1 Units1
+ENUN
+CamOff
+Text(Ch2EsmeArrives)
 NoFade
 ENDA
 
 EndingScene:
-MoveToChapter(Chapter3)
+FADI 10
+STAL 30
+RemoveAll
+CAMERA_CENTERED [0,17]
+FADU 10
+FadeOutMusic
+CamOn
+LOAD1 2 EndSceneGroup
+ENUN
+CamOff
+FlashCursor(Esme,30)
+FlashCursor(Solomin,30)
+MUSC ToS_RoversID
+Text(Ch2EsmeSolominVictoryText)
+CamOn
+MOVE 15 Esme [1,1]
+MOVE 15 Solomin [1,2]
+ENUN
+CamOff
+FADI 10
+STAL 30
+RemoveAll
+SetBackground(HouseInterior1)
+CHECK_ALIVE Vulture
+BNE 776 s0 sC //if vulture alive, skip
+    CHECK_ALIVE Ondrej
+    BNE 777 s0 sC //if ondrej alive, skip; else, play scene where ondrej and vulture are dead
+        Text(Ch2EndingSceneOndrejVultureDead)
+        GOTO 420
+    LABEL 777
+    Text(Ch2EndingSceneVultureDead) //ondrej alive, vulture dead
+    GOTO 420
+LABEL 776
+CHECK_ALIVE Ondrej
+BNE 778 s0 sC //if ondrej alive, skip
+    Text(Ch2EndingSceneOndrejDead)
+    GOTO 420
+LABEL 778
+Text(Ch2EndingScene)
+LABEL 420
+GotoTitleScreen
 NoFade
 ENDA
+
+EndSceneGroup:
+UNIT Esme Lord 0x00 Level(1, Ally, 0) [0,16] 0x00 0x00 1 REDA3R14 [IronLance, Heal, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [0,17] 0x00 0x00 1 REDA2R14 [IronSword] NoAI
+UNIT

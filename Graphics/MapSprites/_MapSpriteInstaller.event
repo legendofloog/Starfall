@@ -115,7 +115,7 @@ MovingMapSprite(KinshiKnight, $1C3D7C, KinshiKnightMMS)
 StandingMapSprite(ScaleguardMapSprite,MapSprite16x32,ScaleguardSMS)
 MovingMapSprite(Scaleguard, $1C3D7C, ScaleguardMMS)
 
-StandingMapSprite(ArmorKnightMapSprite,MapSprite16x32,ArmorKnightSMS)
+StandingMapSprite(ArmorKnightMapSprite,MapSprite16x16,ArmorKnightSMS)
 MovingMapSprite(ArmorKnight, $1C3D7C, ArmorKnightMMS)
 
 StandingMapSprite(GeneralMapSprite,MapSprite16x32,GeneralSMS)

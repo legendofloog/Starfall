@@ -5,3 +5,5 @@
 #define FFTAnxietyID 0x271
 #define RomancingSagaBattle1ID 0x272
 #define ToS_SheenaThemeID 0x273
+#define Ys_DreamingID 0x274
+#define ToS_RoversID 0x275

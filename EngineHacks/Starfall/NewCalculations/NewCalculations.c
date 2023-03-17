@@ -5,6 +5,7 @@
 bool CanBattleUnitGainExp(BattleUnit* actor, BattleUnit* target);
 bool CanBattleUnitGainLevels(BattleUnit* battleUnit);
 int GetLevelDifference(BattleUnit* actor, BattleUnit* target);
+int GetNPCStatIncrease(int growth);
 
 
 int GetCurrentPromotedLevelBonus(){
@@ -398,6 +399,23 @@ void CheckBattleUnitStatCaps(struct Unit* unit, struct BattleUnit* bu) {
 	}
         
 }
+
+// makes autolevels fixed
+int GetAutoleveledStatIncrease(int growth, int levelCount) {
+    return GetNPCStatIncrease(growth * (levelCount + 1));
+}
+
+int GetNPCStatIncrease(int growth){
+	int result = 0;
+	
+	while (growth >= 100) {
+        result++;
+        growth -= 100;
+    }
+
+	return result;
+}
+
 //FE4 weapon rank thing (built to save weapon rank data for other things, perhaps); also con bonus is meaningless
 //Notes: remove UnitHasMagicRank from wherever it's used
 

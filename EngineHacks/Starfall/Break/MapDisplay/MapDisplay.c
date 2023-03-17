@@ -13,6 +13,26 @@ void MapAnim_BeginBREAKAnim(struct Unit* unit)
         TILEREF(BM_OBJCHR_BANIM_EFFECT, 0), 0, 2);
 }
 
+void PutBattleForecastWeaponTriangleArrows(struct BattleForecastProc* proc) {
+    int wtArrowA = 0;
+    int wtArrowB = 0;
+
+    if (DidUnitBreak()) { //at advantage
+        wtArrowA = 1;
+        wtArrowB = 2;
+    }
+
+    if (wtArrowB != 0) {
+        UpdateStatArrowSprites((proc->x + 8) * 8 + 3, (proc->y + 11) * 8, wtArrowB == 2 ? 1 : 0);
+    }
+
+    if (wtArrowA != 0) {
+        UpdateStatArrowSprites((proc->x + 2) * 8 + 3, (proc->y + 1) * 8, wtArrowA == 2 ? 1 : 0);
+    }
+
+    return;
+}
+
 /*void DisplayUnitAdditionalBlinkingIcons(void) {
     u8 protectCharacterId;
     int i;

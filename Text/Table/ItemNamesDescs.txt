@@ -13,10 +13,10 @@ Razor Edge[X]
 ## RazorLanceName
 Razor Lance[X]
 
-## IronGreatlanceName
+## IronGreatlanceName ^
 Iron Greatlance[X]
 
-## SteelGreatlanceName
+## SteelGreatlanceName ^
 Steel Greatlance[X]
 
 ## BronzeAxeName
@@ -81,3 +81,10 @@ Soothe[X]
 
 ## SootheDesc
 A weak staff used for minor wounds.[X]
+
+## LightRuneName
+Light Rune[X]
+
+## LightRuneDesc
+Creates a barrier on an adjacent space,[N]
+temporarily blocking movement across it.[X]

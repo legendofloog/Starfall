@@ -35,6 +35,11 @@ SongTable(FFTAnxietyID,FFT_Anxiety,MapMusicGroup)
 #include "MusicEvents/Tales of Symphonia - Sheena's Theme {Leche}.event"
 SongTable(ToS_SheenaThemeID, songShihna, MapMusicGroup)
 
+//used in chapter 2
+#include "MusicEvents/Dreaming.event"
+SongTable(Ys_DreamingID,songDB,MapMusicGroup)
+#include "MusicEvents/Tales_of_Symphonia_Rover(pandan).event"
+SongTable(ToS_RoversID,TalesOfSymphonia_Rover,MapMusicGroup)
 
 
 //instrument format 
