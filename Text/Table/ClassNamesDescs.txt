@@ -30,7 +30,7 @@ Arch Knight[X]
 Experienced riders proficient at saving[NL]
 allies and running down their enemies.[X]
 
-## PegasusRiderName
+## PegasusRiderName ^
 Pegasus Rider[X]
 
 ## FalcoknightName
@@ -203,7 +203,7 @@ Fire Mage[X]
 ## WindMageName
 Wind Mage[X]
 
-## ThunderMageName
+## ThunderMageName ^
 Thunder Mage[X]
 
 ## MageDesc

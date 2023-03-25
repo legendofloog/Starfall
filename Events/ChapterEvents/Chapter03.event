@@ -1,0 +1,257 @@
+﻿EventPointerTable(Chapter3Events, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0, BossIntroduction,2)
+TurnEventPlayer(0, Reinforcements1,3)
+TurnEventPlayer(0, Reinforcements2,6)
+TurnEventPlayer(0, Reinforcements3,9)
+END_MAIN
+
+BossIntroduction:
+CameraCursor(Barts)
+Text(Chapter3BartsIntroduction)
+NoFade
+ENDA
+
+Reinforcements1:
+SpawnReinforcements(Reinforcements1Units)
+CameraCursor(Barts)
+Text(Chapter3Reinforcement1Text)
+NoFade
+ENDA
+
+Reinforcements2:
+SpawnReinforcements(Reinforcements2Units)
+CameraCursor(Barts)
+Text(Chapter3Reinforcement2Text)
+NoFade
+ENDA
+
+Reinforcements3:
+SpawnReinforcements(Reinforcements3Units)
+CameraCursor(Barts)
+Text(Chapter3Reinforcement3Text)
+SetAI(Barts,0,0,4,0) //charge ai
+NoFade
+ENDA
+
+Reinforcements1Units:
+UNIT Chapter3Generics ArmorKnight 0 Level(4, Enemy, True) [12,22] 0 0 1 REDA12R22 [IronLance] ChargeAI
+UNIT Chapter3Generics ArmorKnight 0 Level(4, Enemy, True) [10,24] 0 0 1 REDA10R24 [IronLance] ChargeAI
+UNIT Chapter3Generics Freelancer 0 Level(4, Enemy, True) [11,8] 0 0 1 REDA11R8 [IronLance] ChargeAI
+UNIT Chapter3Generics Freelancer 0 Level(4, Enemy, True) [13,10] 0 0 1 REDA13R10 [IronLance] ChargeAI
+UNIT
+
+
+Reinforcements2Units:
+UNIT Chapter3Generics FireMage 0 Level(4, Enemy, True) [11,8] 0 0 1 REDA11R8 [Fire] ChargeAI
+UNIT Chapter3Generics FireMage 0 Level(4, Enemy, True) [13,10] 0 0 1 REDA13R10 [Fire] ChargeAI
+UNIT Chapter3Generics Freelancer 0 Level(4, Enemy, True) [12,22] 0 0 1 REDA12R22 [IronLance] ChargeAI
+UNIT Chapter3Generics Freelancer 0 Level(4, Enemy, True) [10,24] 0 0 1 REDA10R24 [IronLance] ChargeAI
+UNIT
+
+Reinforcements3Units:
+UNIT Chapter3Generics FireMage 0 Level(4, Enemy, True) [12,22] 0 0 1 REDA12R22 [Elfire] ChargeAI
+UNIT Chapter3Generics FireMage 0 Level(4, Enemy, True) [10,24] 0 0 1 REDA10R24 [Elfire] ChargeAI
+UNIT
+
+
+CharacterBasedEvents:
+CharacterEventBothWays(7, EsmeAlastoreTalk, Esme, Alastore)
+CharacterEventBothWays(8, NeritasNeilTalk, Neritas, Neil)
+END_MAIN
+
+EsmeAlastoreTalk:
+Text(Chapter3EsmeAlastoreTalkText)
+NoFade
+ENDA
+
+NeritasNeilTalk:
+Text(Chapter3NeritasNeilTalkText)
+NoFade
+ENDA
+
+LocationBasedEvents:
+Vendor(Ch3Vendor,9,16)
+Armory(Ch3Armory,10,16)
+END_MAIN
+
+Ch3Vendor:
+SHLI Thunder Elthunder Soothe Heal Vulnerary
+BYTE 0x0 0x0
+ALIGN 4
+
+Ch3Armory:
+SHLI IronSword SteelSword IronBlade IronAxe SteelAxe IronPoleaxe IronLance SteelLance IronGreatlance IronBow SteelBow MiniBow
+BYTE 0x0 0x0
+ALIGN 4
+
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+
+Units1:
+UNIT Esme Lord 0 Level(1, Ally, False) [11,4] 0x00 0x00 0 0 [IronSword,Soothe,Vulnerary] NoAI
+UNIT Solomin Grassrunner Esme Level(1, Ally, False) [12,3] 0x00 0x00 0 0 [SilverSword,IronBow,Vulnerary] NoAI
+UNIT Neritas SwordRider Esme Level(1, Ally, False) [12,5] 0x00 0x00 0 0 [SteelSword, IronSword, Vulnerary] NoAI
+UNIT Oldrik LanceRider Esme Level(1, Ally, False) [12,4] 0x00 0x00 0x0 0 [IronLance,Vulnerary] NoAI
+UNIT Baeric AxeRider Esme Level(1, Ally, False) [13,3] 0x00 0x00 0x0 0 [SteelAxe,IronAxe,Vulnerary] NoAI
+UNIT Basren BowRider Esme Level(1, Ally, False) [13,4] 0x00 0x00 0x0 0  [IronBow,Vulnerary] NoAI
+UNIT Ondrej Soldier Esme Level(1, Ally, False) [13,5] 0x00 0x00 1 REDA13R5 [IronLance, Vulnerary] NoAI
+UNIT Vulture Cleric Esme Level(1, Ally, False) [14,5] 0x00 0x00 1 REDA14R5 [Heal,LightRune,Vulnerary] NoAI
+UNIT
+
+PlayerUnits1:
+UNIT Esme Lord 0x00 Level(1, Ally, False) [14,5] 0x00 0x00 1 REDA11R4 [IronLance, Soothe, Vulnerary] NoAI
+UNIT Solomin Grassrunner Esme Level(1, Ally, False) [14,4] 0x00 0x00 1 REDA12R3 [SilverSword,IronBow,Vulnerary] NoAI
+UNIT Neritas SwordRider Esme Level(1, Ally, False) [14,6] 0x00 0x00 1 REDA12R5 [SteelSword] NoAI
+UNIT
+
+PlayerUnits2:
+UNIT Baeric AxeRider Esme Level(1, Ally, False) [14,4] 0x00 0x00 1 REDA13R3 [SteelAxe,IronAxe,Vulnerary] NoAI
+UNIT Oldrik LanceRider Esme Level(1, Ally, False) [14,5] 0x00 0x00 1 REDA12R4 [IronLance, Vulnerary] NoAI
+UNIT Basren BowRider Esme Level(1, Ally, False) [14,6] 0x00 0x00 1 REDA13R4 [IronBow,Vulnerary] NoAI
+UNIT
+
+PlayerUnits3:
+UNIT Ondrej Soldier Esme Level(1, Ally, False) [14,5] 0x00 0x00 1 REDA13R5 [IronLance, Vulnerary] NoAI
+UNIT Vulture Cleric Esme Level(1, Ally, False) [14,6] 0x00 0x00 1 REDA14R5 [Heal,LightRune,Vulnerary] NoAI
+UNIT
+
+NewPlayerUnits:
+UNIT Alastore ThunderMage 0 Level(6, NPC, False) [7,15] 0x00 0x00 0 0 [Conductance, Thunder, Vulnerary] NoAI
+UNIT Neil ArmorKnight Alastore Level(5, NPC, False) [7,16] 0x00 0x00 0 0 [IronPoleaxe, IronLance, Vulnerary] NoAI
+UNIT Chapter3Tsezari ThunderMage Alastore Level(5, NPC, True) [8,17] 0x00 0x00 0 0 [Thunder] BossAI
+UNIT Chapter3Tsezari ThunderMage Alastore Level(5, NPC, True) [6,17] 0x00 0x00 0 0 [Thunder] BossAI
+UNIT Chapter3Tsezari ArmorKnight Alastore Level(5, NPC, True) [8,11] 0x00 0x00 0 0 [IronLance] BossAI
+UNIT Chapter3Tsezari ArmorKnight Alastore Level(5, NPC, True) [6,11] 0x00 0x00 0 0 [IronLance] BossAI
+UNIT 
+
+EnemyUnits: // empty for now; mix of level 3/4, level 3 on the top side and level 4 on the bottom
+UNIT Chapter3Boss FireMage 0 Level(6, Enemy, False) [11,23] 0 0 0 0 [Beastblaze, Elfire] BossAI
+UNIT Chapter3Generics FireMage 0 Level(4, Enemy, True) [12,22] 0 0 0 0 [Fire] ChargeAI
+UNIT Chapter3Generics FireMage 0 Level(4, Enemy, True) [10,24] 0 0 0 0 [Fire] ChargeAI
+UNIT Chapter3Generics FireMage 0 Level(4, Enemy, True) [7,24] 0 0 0 0 [Fire] ChargeAI
+
+UNIT Chapter3Generics Fighter 0 Level(3, Enemy, True) [6,4] DropItem 0 0 0 [RazorAxe] GroupTwoAI
+UNIT Chapter3Generics Archer 0 Level(3, Enemy, True) [2,7] 0 0 0 0 [SteelBow] GroupTwoAI
+
+UNIT Chapter3Generics LanceRider 0 Level(3, Enemy, True) [11,8] 0 0 0 0 [IronLance] ChargeAI
+UNIT Chapter3Generics SwordRider 0 Level(3, Enemy, True) [12,9] 0 0 0 0 [SteelSword] ChargeAI
+UNIT Chapter3Generics LanceRider 0 Level(3, Enemy, True) [13,10] 0 0 0 0 [IronLance] ChargeAI
+
+UNIT Chapter3Generics PegasusRider 0 Level(3, Enemy, True) [1,1] DropItem 0 0 0 [Horseslayer] GroupOneAI
+UNIT Chapter3Generics PegasusRider 0 Level(3, Enemy, True) [3,0] 0 0 0 0 [IronLance] GroupOneAI
+UNIT Chapter3Generics PegasusRider 0 Level(3, Enemy, True) [0,3] 0 0 0 0 [IronLance] GroupOneAI
+
+UNIT Chapter3Generics Fighter 0 Level(3, Enemy, True) [2,12] 0 0 0 0 [SteelAxe] GroupFiveAI
+UNIT Chapter3Generics Archer 0 Level(3, Enemy, True) [1,13] 0 0 0 0 [SteelBow] GroupFiveAI
+UNIT Chapter3Generics Myrmidon 0 Level(3, Enemy, True) [2,14] DropItem 0 0 0 [IronSword, RedGem] GroupFiveAI
+
+UNIT Chapter3Generics Mercenary 0 Level(3, Enemy, True) [11,7] 0 0 0 0 [IronBlade] GroupThreeAI
+UNIT Chapter3Generics Freelancer 0 Level(3, Enemy, True) [14,10] 0 0 0 0 [IronLance] GroupThreeAI
+
+UNIT Chapter3Generics Soldier 0 Level(4, Enemy, True) [12,14] 0 0 0 0 [IronGreatlance] GroupFourAI
+UNIT Chapter3Generics Archer 0 Level(4, Enemy, True) [13,15] DropItem 0 0 0 [IronLongbow] GroupFourAI
+
+UNIT Chapter3Generics Mercenary 0 Level(4, Enemy, True) [1,16] 0 0 0 0 [SteelSword] GroupSixAI
+UNIT Chapter3Generics PegasusRider 0 Level(4, Enemy, True) [0,20] 0 0 0 0 [IronLance] GroupSixAI
+UNIT Chapter3Generics PegasusRider 0 Level(4, Enemy, True) [1,21] 0 0 0 0 [IronLance] GroupSixAI
+
+UNIT Chapter3Generics Fighter 0 Level(4, Enemy, True) [13,17] 0 0 0 0 [SteelAxe] GroupEightAI
+UNIT Chapter3Generics PegasusRider 0 Level(4, Enemy, True) [13,21] 0 0 0 0 [IronLance] GroupEightAI
+UNIT Chapter3Generics PegasusRider 0 Level(4, Enemy, True) [14,20] 0 0 0 0 [IronLance] GroupEightAI
+
+UNIT Chapter3Generics Mercenary 0 Level(4, Enemy, True) [5,23] 0 0 0 0 [IronSword] GroupSevenAI
+UNIT Chapter3Generics Archer 0 Level(4, Enemy, True) [4,23] DropItem 0 0 0 [SteelBow, EnergyRing] GroupSevenAI
+UNIT Chapter3Generics Brigand 0 Level(4, Enemy, True) [3,22] 0 0 0 0 [IronAxe] GroupSevenAI
+UNIT Chapter3Generics Freelancer 0 Level(4, Enemy, True) [3,24] 0 0 0 0 [IronLance] GroupSevenAI
+UNIT
+
+BeginningScene:
+LOAD1 1 EnemyUnits
+ENUN
+LOAD1 1 NewPlayerUnits
+ENUN
+SetBackground(DaylightForest)
+MUSC ToS_SheenaThemeID
+Text(Chapter3BeginningScene1)
+FADI 10
+FadeOutMusic
+CAMERA_CENTERED [14,5]
+STAL 30
+EraseBackground
+CamOn
+LOAD1 0 PlayerUnits1
+ENUN
+LOAD1 0 PlayerUnits2
+ENUN
+LOAD1 0 PlayerUnits3
+ENUN
+CamOff
+MUSC FFTAnxietyID
+Text(Chapter3BeginningScene2)
+CameraCursor(Alastore)
+FlashCursor(Neil,30)
+Text(Chapter3BeginningScene3)
+MOVE 15 Neil [7,11]
+MOVE 10 Alastore [7,17]
+ENUN
+FlashCursor(Alastore,30)
+FlashCursor(Neil,30)
+CUSA Alastore
+CUSA Neil
+NoFade
+ENDA
+
+EndingScene:
+FADI 10
+RemoveAll
+FadeOutMusic
+STAL 30
+SetBackground(CastleOutdoors)
+MUSC ToS_RoversID
+Text(Chapter3EndingSceneNeilAlive)
+GotoTitleScreen
+NoFade
+ENDA
+
+EndSceneGroup:
+UNIT Esme Lord 0x00 Level(1, Ally, 0) [0,16] 0x00 0x00 1 REDA3R14 [IronLance, Heal, Vulnerary] NoAI
+UNIT Solomin Grassrunner 0x00 Level(1, Ally, 0) [0,17] 0x00 0x00 1 REDA2R14 [IronSword] NoAI
+UNIT

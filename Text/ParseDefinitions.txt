@@ -64,6 +64,7 @@
 [LoadOndrej] = [LoadFace][0xa][0x1]
 
 [LoadAlastore] = [LoadFace][0xc][0x1]
+[LoadNeil] = [LoadFace][0xe][0x1]
 
 [LoadColson] = [LoadFace][0x13][0x1]
 [LoadKorina] = [LoadFace][0x14][0x1]
@@ -80,6 +81,11 @@
 [LoadStarbornBoss] = [LoadFace][0x6A][0x1]
 
 [LoadChapter2Boss] = [LoadStarbornBoss]
+[LoadBarts] = [LoadFace][0x30][0x1]
+[LoadChapter3Boss] = [LoadBarts]
+
+
+[LoadSoldier] = [LoadFace][0x6A][0x1]
 
 [BoxHeight] = [0x80][0x2B]
 [1LB] = [BoxHeight][0x01]

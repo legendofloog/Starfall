@@ -78,3 +78,24 @@ Neil[X]
 ## NeilDesc
 Retainer of Duke Tsezar. Formerly a[N]
 criminal, he loyally serves his liege.[X]
+
+## Chapter3GenericsName
+Yulian[X]
+
+## Chapter3GenericsDesc
+Soldiers of House Yulia who serve[N]
+their aims of conquest unflinchingly.[X]
+
+## Chapter3BossName
+Barts[X]
+
+## Chapter3BossDesc
+An elite of House Yulian's mage corps.[N]
+Sure of himself, to a fault.[X]
+
+## Chapter3TsezariName
+Tsezari[X]
+
+## Chapter3TsezariDesc
+Soldiers under Duke Tsezar's banner[N]
+who are forced to protect their home.[X]

@@ -15,3 +15,7 @@
 #define Chapter1Boss $6F
 #define Chapter2Generics $70
 #define Chapter2Boss $71
+#define Chapter3Generics $72
+#define Chapter3Boss $73
+#define Barts Chapter3Boss
+#define Chapter3Tsezari $74

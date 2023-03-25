@@ -38,11 +38,18 @@ NoFade
 ENDA
  
 CharacterBasedEvents:
+CharacterEventBothWays(7, SolominVultureTalk, Solomin, Vulture)
 END_MAIN
 
+SolominVultureTalk:
+NoFade
+ENDA
+
+EsmeNeritasTalk:
+NoFade
+ENDA
+
 LocationBasedEvents:
-Vendor(Ch2Vendor,7,9)
-Armory(Ch2Armory,10,8)
 Village(0x11,Village1,17,15)
 END_MAIN
 
@@ -50,17 +57,6 @@ END_MAIN
 //need to setup tile changes on map
 Village1:
 VillageEventItem(C2VillageText,HouseInterior2,Barrier)
-
-//We forgot to put keys in item table, put back later
-Ch2Vendor:
-SHLI Soothe Heal Vulnerary
-BYTE 0x0 0x0
-ALIGN 4
-
-Ch2Armory:
-SHLI IronSword SteelSword IronAxe SteelAxe IronLance SteelLance IronBow SteelBow
-BYTE 0x0 0x0
-ALIGN 4
 
 MiscBasedEvents:
 DefeatAll(EndingScene)
@@ -104,8 +100,8 @@ UNIT Basren BowRider 0x01 Level(1, Ally, 0) [18,0] 0x00 0x00 0x0 0 [IronBow, Iro
 UNIT
 
 NewPlayers:
-UNIT Neritas SwordRider Esme Level(5,Ally,False) [1,1] 0x0 0x0 1 REDA3R3 [SteelSword, IronSword, Vulnerary] NoAI
-UNIT Vulture Cleric Esme Level(4,Ally,False) [1,1] 0x0 0x0 1 REDA2R2 [Heal,LightRune,Vulnerary] NoAI
+UNIT Neritas SwordRider Esme Level(4,Ally,False) [1,1] 0x0 0x0 1 REDA3R3 [SteelSword, IronSword, Vulnerary] NoAI
+UNIT Vulture Cleric Esme Level(3,Ally,False) [1,1] 0x0 0x0 1 REDA2R2 [Heal,LightRune,Vulnerary] NoAI
 UNIT Ondrej Soldier Esme Level(2,Ally,False) [1,1] 0x0 0x0 1 REDA2R4 [IronLance, Vulnerary] NoAI
 UNIT
 
@@ -141,7 +137,7 @@ UNIT Chapter2Generics Fighter   Chapter2Boss Level(2,Enemy,True) [18,10] 0x0 0x0
 UNIT Chapter2Generics Mercenary   Chapter2Boss Level(2,Enemy,True) [16,16] 0 0x0 0x0 0x0 [IronSword] GroupFourAI
 UNIT Chapter2Generics Fighter   Chapter2Boss Level(2,Enemy,True) [15,14] 0x0 0x0 0x0 0x0 [IronAxe] GroupFourAI
 
-UNIT Chapter2Generics Myrmidon   Chapter2Boss Level(2,Enemy,True) [10,8] DropItem 0x0 0x0 0x0 [RazorEdge, RedGem] GroupFiveAI
+UNIT Chapter2Generics Myrmidon   Chapter2Boss Level(2,Enemy,True) [10,8] DropItem 0x0 0x0 0x0 [RazorEdge] GroupFiveAI
 UNIT Chapter2Generics Archer   Chapter2Boss Level(2,Enemy,True) [12,9] 0 0x0 0x0 0x0 [IronBow] GroupFiveAI
 
 UNIT Chapter2Generics Soldier Chapter2Boss Level(2,Enemy,True) [7,16] 0 0x0 0x0 0x0 [IronLance] TwoActionAI
@@ -172,7 +168,7 @@ EraseBackground
 LOAD1 0x1 NewPlayers
 ENUN
 CamOn
-LOAD2 0x1 Units1
+LOAD1 0x0 Units1
 ENUN
 CamOff
 Text(Ch2EsmeArrives)
@@ -220,7 +216,7 @@ BNE 778 s0 sC //if ondrej alive, skip
 LABEL 778
 Text(Ch2EndingScene)
 LABEL 420
-GotoTitleScreen
+GotoNextChapter(Chapter3)
 NoFade
 ENDA
 

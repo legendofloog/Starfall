@@ -15,6 +15,12 @@ extern struct BreakEntry BreakTargetTable[];
 extern u8 BreakExemptCharacterList[];
 extern u8 BreakExemptClassList[];
 
+//need these for break display
+
+bool CheckEventId(int eventId);
+void UnsetEventId(int eventId);
+void SetEventId(int eventId);
+
 //skillsys stuff
 extern u8 DazzleIDLink;
 

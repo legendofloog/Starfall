@@ -1,5 +1,6 @@
 #include "SplitPromoItems/SplitPromoItems.event"
 #include "NewCalculations/Installer.event"
+#include "NewItemEffects/Installer.event"
 #include "ModularMinimugBox-master/Installers/MMBInstallerBellsOfByelen.event"
 #include "GroupAI/GroupAI.event"
 #include "Music/MusicAsmInstaller.event"

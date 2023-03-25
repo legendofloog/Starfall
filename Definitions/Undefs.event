@@ -5,6 +5,12 @@
 #undef Wyrmslayer
 #undef HeavySpear
 #undef Ravager
+#undef Fire
+#undef Elfire
+#undef Thunder
+#undef Lancereaver
+#undef Swordreaver
+#undef Axereaver
 
 //classes
 #undef GreatKnight

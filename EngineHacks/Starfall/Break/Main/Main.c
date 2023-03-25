@@ -21,9 +21,21 @@ bool DidUnitBreak(){
 	if ((gBattleActor.battleAttack > gBattleTarget.battleDefense)){ //did unit do damage
 		int i = 0;
 		while (BreakTargetTable[i].breakerWType != 0xFF){
-			if ((BreakTargetTable[i].breakerWType == GetItemType(gBattleActor.weaponBefore)) && (BreakTargetTable[i].brokenWType == GetItemType(gBattleTarget.weaponBefore))){
+			if ((gBattleActor.weaponAttributes & IA_REVERTTRIANGLE) && !(gBattleTarget.weaponAttributes & IA_REVERTTRIANGLE)){
+				if ((BreakTargetTable[i].breakerWType == GetItemType(gBattleTarget.weaponBefore)) && (BreakTargetTable[i].brokenWType == GetItemType(gBattleActor.weaponBefore))){
+					return true;
+				}
+			}
+			else if ((gBattleTarget.weaponAttributes & IA_REVERTTRIANGLE) && !(gBattleActor.weaponAttributes & IA_REVERTTRIANGLE)){
+				if ((BreakTargetTable[i].breakerWType == GetItemType(gBattleTarget.weaponBefore)) && (BreakTargetTable[i].brokenWType == GetItemType(gBattleActor.weaponBefore))){
+					return true;
+				}
+			}
+			else{
+				if ((BreakTargetTable[i].breakerWType == GetItemType(gBattleActor.weaponBefore)) && (BreakTargetTable[i].brokenWType == GetItemType(gBattleTarget.weaponBefore))){
+					return true;
+				}
 				
-				return true;
 			}
 			i++;
 		}
@@ -40,7 +52,7 @@ void BreakPostBattle(){
 
 	Unit* target = &gBattleTarget.unit;
 
-	// unset aftershock
+	// unset break
 	bool alreadyBroken = false;
 	if (gDebuffTable[target->index].skillState & SKILLSTATE_BREAK){
 		gDebuffTable[target->index].skillState &= ~SKILLSTATE_BREAK;
@@ -57,10 +69,12 @@ void BreakPostBattle(){
 		return;
 	}
 
-	// try to apply aftershock
-	if(DidUnitBreak() & (!alreadyBroken)){
+	// try to apply break
+	if(DidUnitBreak() & (!alreadyBroken) && (gDebuffTable[target->index].skillState & SKILLSTATE_BROKEN_IN_BATTLE)){
 		gDebuffTable[target->index].skillState |= SKILLSTATE_BREAK;
 	}
+	//unset the broken in battle bit at the end
+	gDebuffTable[target->index].skillState &= ~SKILLSTATE_BROKEN_IN_BATTLE; //gets rid of mid battle break
 }
 
 void ClearActiveFactionBreakStatus(){
@@ -71,6 +85,7 @@ void ClearActiveFactionBreakStatus(){
 
         if (UNIT_IS_VALID(unit)){
 			gDebuffTable[unit->index].skillState &= ~SKILLSTATE_BREAK; //undo break status for current actors
+			gDebuffTable[unit->index].skillState &= ~SKILLSTATE_BROKEN_IN_BATTLE;
 		} 
     }
 }

@@ -445,3 +445,4 @@ void UnitLoadStatsFromChracter(struct Unit* unit, const struct CharacterData* ch
     else
         unit->exp = UNIT_EXP_DISABLED;
 }
+

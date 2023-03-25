@@ -24,11 +24,21 @@
     Chapter2MapchipConfig:
     #incbin "Config/Fields Village Mapchip Config_comp.dmp"
 
+//Zora Fields, Full Thracia Palette
+    ALIGN 4
+    Chapter3Palette:
+    #incbin "Palette/Thracia Night_pal.dmp"
+
+    ALIGN 4
+    Chapter3Config:
+    #incbin "Config/Zora_Field_C3_comp.dmp"
+
     EventPointerTable(Chapter1ObjectID,Chapter1Object)
     EventPointerTable(Chapter1PaletteID,Chapter1Palette)
     EventPointerTable(Chapter1ConfigID,Chapter1MapchipConfig)
     EventPointerTable(Chapter2ObjectID,Chapter2Object)
     EventPointerTable(Chapter2PaletteID,Chapter2Palette)
     EventPointerTable(Chapter2ConfigID,Chapter2MapchipConfig)
-
+    EventPointerTable(Chapter3PaletteID,Chapter3Palette)
+    EventPointerTable(Chapter3ConfigID,Chapter3Config)
     

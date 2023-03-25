@@ -22,6 +22,24 @@ Skl[X]
 # 0x4EE
 Eva[X]
 
+# 0x50A
+Wind[X]
+
+# 0x50B ^
+Thunder[X]
+
+# 0x50C
+Fire[X]
+
+# 0x565
+Wind magic mastery level.[X]
+
+# 0x566
+Thunder magic mastery level.[X]
+
+# 0x567
+Fire magic mastery level.[X]
+
 # 0x544
 Unit hit points. The unit[NL]
 is defeated if this reaches 0.[X]
@@ -41,6 +59,10 @@ Hit% by three per point.[X]
 # 0x549
 Speed. If it is five or greater than[N]
 an enemy's, this unit can attack twice.[X]
+
+# 0x484
+Increases Str by 2 points.[NL]
+Vanishes after use.[X]
 
 # 0x54A
 Evasion. Decreases an enemy's[N]

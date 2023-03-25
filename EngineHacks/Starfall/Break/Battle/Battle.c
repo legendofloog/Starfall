@@ -22,7 +22,7 @@ void BattleUnwind(void) {
             }
         }
     } while (FALSE);
-	gDebuffTable[gBattleTarget.unit.index].skillState &= ~SKILLSTATE_BROKEN_IN_BATTLE; //gets rid of mid battle break
+	//gDebuffTable[gBattleTarget.unit.index].skillState &= ~SKILLSTATE_BROKEN_IN_BATTLE; //gets rid of mid battle break
     gBattleHitIterator->info |= BATTLE_HIT_INFO_END;
 }
 
@@ -36,7 +36,7 @@ s8 BattleGenerateRoundHits(struct BattleUnit* attacker, struct BattleUnit* defen
         
 
 	if (gDebuffTable[attacker->unit.index].skillState & SKILLSTATE_BROKEN_IN_BATTLE){
-		return FALSE;
+		return FALSE; //checks if attacker is not broken and not the battle actor
 	}
 
     attrs = gBattleHitIterator->attributes;
@@ -57,13 +57,16 @@ void BattleGenerateHitEffects(struct BattleUnit* attacker, struct BattleUnit* de
 
     if (!(gBattleHitIterator->attributes & BATTLE_HIT_ATTR_MISS)) {
         if (DidUnitBreak() && (attacker->unit.pCharacterData->number == gBattleActor.unit.pCharacterData->number)){
-			if (gDebuffTable[defender->unit.index].skillState & SKILLSTATE_BROKEN_IN_BATTLE){
+            if (gBattleStats.config & BATTLE_CONFIG_REAL){
+                if (gDebuffTable[gBattleTarget.unit.index].skillState & SKILLSTATE_BROKEN_IN_BATTLE){ //if this already set, do not set break
 
-			}
-			else{
-				gDebuffTable[gBattleTarget.unit.index].skillState |= SKILLSTATE_BROKEN_IN_BATTLE;
-				gBattleHitIterator->attributes |= BATTLE_HIT_BREAK;
-			}
+                }
+                else{
+                    gDebuffTable[gBattleTarget.unit.index].skillState |= SKILLSTATE_BROKEN_IN_BATTLE;
+			        gBattleHitIterator->attributes |= BATTLE_HIT_BREAK;
+                }
+                
+            }
 		}
 		
 		switch (GetItemWeaponEffect(attacker->weapon)) {

@@ -21,13 +21,20 @@
 #define NeritasMug 0x9
 #define OndrejMug 0xa
 #define AlastoreMug 0xc
-#define KorinaMug 0x14
+#define NeilMug 0xe
+
+#define BartsMug 0x30
+
 
 //background ids
 #define HouseInterior1 0x0
 #define HouseInterior2 0x1
 #define VillageRoadDay 0x03
+#define CastleOutdoors 0x15
+#define MountainPlain 0x1B
+#define DaylightForest 0x1D
 #define SunsetForest 0x1F
+
 
 
 
@@ -44,3 +51,16 @@
 //new ones
 #define FreelancerClassCard 0x100
 #define HunterClassCard 0x101
+
+//tileset stuff
+#define Chapter1ObjectID 0x88
+#define Chapter1PaletteID 0x89
+#define Chapter1ConfigID 0x8A
+#define Chapter1TileAnimationsID 0x8B
+
+#define Chapter2ObjectID 0x8C
+#define Chapter2PaletteID 0x8d
+#define Chapter2ConfigID 0x8e
+
+#define Chapter3PaletteID 0x8F
+#define Chapter3ConfigID 0x90

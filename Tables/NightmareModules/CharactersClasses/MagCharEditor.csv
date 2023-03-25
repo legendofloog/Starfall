@@ -10,112 +10,112 @@ None,0,0
 0x08 Ondrej,(-1),5
 0x09 Alastore,4,60
 0x0A Neil,2,25
-Innes,1,10
-Lute,5,65
-Natasha,1,60
-Cormag,0,5
-Ephraim,0,15
-Forde,1,10
-Kyle,0,10
-Amelia,2,25
-Artur,5,50
-Gerik,0,10
-Tethys,0,5
-Marisa,1,10
-Saleh,11,30
-Ewan,2,45
-L'Arachel,5,50
-Dozla,0,5
-#NAME?,0,50
-Rennac,3,35
-Duessel,0,5
-Myrrh,2,85
-Knoll,10,50
-Joshua,0,20
-Syrene,4,20
-Tana,2,15
-Lyon,13,50
-Orson,3,10
-Glen,2,0
-Selena,10,40
-Valter,2,10
-Riev,10,45
-Caellach,2,5
-Fado,4,5
-Ismaire,7,15
-Hayden,2,10
-FakeEirika,0,0
-#NAME?,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-#NAME?,0,0
-#NAME?,0,0
-#NAME?,0,0
-#NAME?,0,0
-#NAME?,0,0
-#NAME?,0,0
-#NAME?,0,0
-#NAME?,0,0
-Lyon's Summon,0,0
-#NAME?,0,0
-#NAME?,0,0
-Knoll's Summon,0,0
-Ewan's Summon,0,0
-Lyon (Ch 17),13,50
-Morva (Ch 20),6,85
-Orson (Ch 5x),3,10
-Valter (Ch 15),2,5
-Selena (Ch 10B +ACY- 13B),10,40
-Valter (Prologue),2,5
-Breguet (Ch 1),0,5
-Bone (Ch 2),0,5
-Bazba (Ch 3),1,10
-Entombed (Ch 4),1,5
-Saar (Ch 5),1,5
-Novala (Ch 6),8,50
-Murray (Ch 7),2,5
-Tirado (Ch 8),3,15
-Binks (Ch 9A),2,10
-Pablo (Ch 10A),8,50
-Maelduin (Ch 12A),2,10
-Aias (Ch 13A),2,5
-Carlyle (Ch 14A),5,30
-Caellach (Ch 15),3,5
-Pablo (Ch 13A),8,50
-0,0,0
-Gorgon (Ch 18),10,65
-Riev (Ch 19 +ACY- 20),10,45
-0,0,0
-0,0,0
-Gheb (Ch 9B),2,5
-Beran (Ch 10B),3,15
-Cyclops (Ch 12B),2,5
-Wight (Ch 11A),2,5
-Deathgoyle (Ch 11B),3,5
-Entombed (Monster Boss),3,5
-0,0,0
-0,0,0
-0,0,0
-#NAME?,0,0
-Hunter (Ch 16),3,10
-#NAME?,0,0
-Brigand,0,0
-0,0,0
-O'Neill (Prologue),0,5
-Glen (Cutscene),0,0
-Zonta (Ch 5x),1,5
-Vigarde (Ch 14B),5,15
-Lyon (Ch Final),20,20
-Orson (Ch 16),3,5
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
+0x0B Innes,1,10
+0x0C Lute,5,65
+0x0D Natasha,1,60
+0x0E Cormag,0,5
+0x0F Ephraim,0,15
+0x10 Forde,1,10
+0x11 Kyle,0,10
+0x12 Amelia,2,25
+0x13 Artur,5,50
+0x14 Gerik,0,10
+0x15 Tethys,0,5
+0x16 Marisa,1,10
+0x17 Saleh,11,30
+0x18 Ewan,2,45
+0x19 L'Arachel,5,50
+0x1A Dozla,0,5
+0x1B -,0,50
+0x1C Rennac,3,35
+0x1D Duessel,0,5
+0x1E Myrrh,2,85
+0x1F Knoll,10,50
+0x20 Joshua,0,20
+0x21 Syrene,4,20
+0x22 Tana,2,15
+0x23 Lyon,13,50
+0x24 Orson,3,10
+0x25 Glen,2,0
+0x26 Selena,10,40
+0x27 Valter,2,10
+0x28 Riev,10,45
+0x29 Caellach,2,5
+0x2A Fado,4,5
+0x2B Ismaire,7,15
+0x2C Hayden,2,10
+0x2D -,0,0
+0x2E -,0,0
+0x2F -,0,0
+0x30 -,0,0
+0x31 -,0,0
+0x32 -,0,0
+0x33 -,0,0
+0x34 -,0,0
+0x35 -,0,0
+0x36 -,0,0
+0x37 -,0,0
+0x38 -,0,0
+0x39 -,0,0
+0x3A -,0,0
+0x3B Lyon's Summon,0,0
+0x3C <Summon>,0,0
+0x3D <'Summonern'>,0,0
+0x3E Knoll's Summon,0,0
+0x3F Ewan's Summon,0,0
+0x40 Lyon (Ch 17),13,50
+0x41 Morva (Ch 20),6,85
+0x42 Orson (Ch 5x),3,10
+0x43 Valter (Ch 15),2,5
+0x44 Selena (Ch 10B & 13B),10,40
+0x45 Valter (Prologue),2,5
+0x46 Breguet (Ch 1),0,5
+0x47 Bone (Ch 2),0,5
+0x48 Bazba (Ch 3),1,10
+0x49 Entombed (Ch 4),1,5
+0x4A Saar (Ch 5),1,5
+0x4B Novala (Ch 6),8,50
+0x4C Murray (Ch 7),2,5
+0x4D Tirado (Ch 8),3,15
+0x4E Binks (Ch 9A),2,10
+0x4F Pablo (Ch 10A),8,50
+0x50 Maelduin (Ch 12A),2,10
+0x51 Aias (Ch 13A),2,5
+0x52 Carlyle (Ch 14A),5,30
+0x53 Caellach (Ch 15),3,5
+0x54 Pablo (Ch 13A),8,50
+0x55 -,0,0
+0x56 Gorgon (Ch 18),10,65
+0x57 Riev (Ch 19 & 20),10,45
+0x58 -,0,0
+0x59 -,0,0
+0x5A Gheb (Ch 9B),2,5
+0x5B Beran (Ch 10B),3,15
+0x5C Cyclops (Ch 12B),2,5
+0x5D Wight (Ch 11A),2,5
+0x5E Deathgoyle (Ch 11B),3,5
+0x5F Entombed (Monster Boss),3,5
+0x60 -,0,0
+0x61 -,0,0
+0x62 -,0,0
+0x63 -,0,0
+0x64 Hunter,3,10
+0x65 Bandit (Carcino?),0,0
+0x66 Brigand,0,0
+0x67 Bandit (Unused?),0,0
+0x68 O'Neill (Prologue),0,5
+0x69 Glen (Cutscene),0,0
+0x6A Zonta (Ch 5x),1,5
+0x6B Vigarde (Ch 14B),5,15
+0x6C Lyon (Ch Final),20,20
+0x6D Orson (Ch 16),3,5
+0x6E Chapter 1 Generics,0,0
+0x6F Chapter 1 Boss,10,50
+0x70 Chapter 2 Generics,0,0
+0x71 Chapter 2 Boss,0,0
+0x72 Chapter3Generics,0,0
+0x73 Chapter3Boss,4,40
+0x74 Chapter3Tsezari,0,0
 0,0,0
 0,0,0
 0,0,0

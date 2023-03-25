@@ -8,22 +8,40 @@
 #define Thunder_WType 6
 #define Fire_WType 7
 
+//Swords
+
+//E Rank: Iron Sword
+//D Rank: Steel Sword, Iron Blade, Razor Edge, Wingclipper, Windblade
+//C Rank: Steel Blade, Lancereaver
+//B Rank: Silver Sword, Killing Edge
+//A Rank: Brave Sword
+
 //#define IronSword 0x01
-#define BronzeSword 0x02
+#define Windblade 0x02
+#define Mageblade Windblade
 //#define SteelSword 0x03
 //#define SilverSword 0x04
 //#define IronBlade 0x05
 //#define SteelBlade 0x06
 #define RazorEdge 0x7
 #define KillingEdge 0x8
-#define Armorslayer 0x9
-#define Wyrmslayer 0xA
+#define Lancereaver 0x9
+#define Wingclipper 0xA
 //#define BraveSword 0x0B
-//Unused slots from 0xC - 0x11 (6 spaces)
+
+
+//Lances
+
+//E Rank: Iron Lance (1)
+//D Rank: Steel Lance, Iron Greatlance, Razor Lance, Horseslayer, Javelin (5)
+//C Rank: Steel Greatlance, Axereaver
+//B Rank: Silver Lance, Killer Lance, Spear
+//A Rank: Brave Lance
+
 #define IronGreatlance 0x12
 #define SteelGreatlance 0x13
 //#define IronLance 0x14
-#define BronzeLance 0x15
+#define Axereaver 0x15
 //#define SteelLance 0x16
 //#define SilverLance 0x17
 #define RazorLance 0x18
@@ -32,21 +50,36 @@
 //#define Horseslayer 0x1B
 //#define Javelin 0x1C
 //#define Spear 0x1D
-#define HeavySpear 0x1e
+
+//Axes
+
+//E Rank: Iron Axe (1)
+//D Rank: Steel Axe, Iron Poleaxe, Razor Axe, Hammer, Hand Axe (5)
+//C Rank: Steel Poleaxe, Swordreaver
+//B Rank: Silver Axe, Killer Lance, Tomahawk
+//A Rank: Brave Axe
+
 //#define IronAxe 0x1F
 //#define SteelAxe 0x20
 //#define SilverAxe 0x21
-#define BronzeAxe 0x22
+#define Swordreaver 0x22
 //#define BraveAxe 0x23
 //#define KillerAxe 0x24
-#define Wingclipper 0x25
 //#define Hammer 0x26
 #define RazorAxe 0x27
 //#define HandAxe 0x28
 //#define Tomahawk 0x29
 #define IronPoleaxe 0x2A
 #define SteelPoleaxe 0x2B
-#define BronzeBow 0x2C
+
+//Bows
+//E Rank: Iron Bow
+//D Rank: Steel Bow, Iron Longbow, Razor Bow, Mini Bow
+//C Rank: Steel Longbow, Manakiller, Arcane Bow
+//B Rank: Silver Bow, Killer Bow, Break Arc
+//A Rank: Brave Bow
+
+#define MiniBow 0x2C
 //#define IronBow 0x2D
 //#define SteelBow 0x2E
 //#define SilverBow 0x2F
@@ -58,13 +91,38 @@
 #define Manakiller 0x35
 #define ArcaneBow 0x36
 #define BreakArc 0x37
-#define Wind 0x38
 
+//Wind
+#define Wind 0x38
+#define Elwind 0x39
+#define Arcwind 0x3A
+#define Gale 0x3B
+
+
+//Thunder
+#define Thunder 0x3f
+#define Elthunder 0x40
+#define Arcthunder 0x41
+#define Conductance 0x42
+
+
+//Fire
+#define Fire 0x45
+#define Elfire 0x46
+#define Arcfire 0x47
+#define Beastblaze 0x48
+
+
+//Staves
+//#define Heal 0x4B
+//#define Barrier 0x59
 #define Soothe 0x5A
 
-
+//Items
 //#define HeroCrest 0x64
 #define KnightProof 0x65
 #define HuntersMark 0x66
 #define RidersBadge 0x67
 //#define GuidingRing 0x68
+
+#define FocusStaff 0xce

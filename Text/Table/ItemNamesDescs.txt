@@ -76,6 +76,73 @@ Wind[X]
 ## WindDesc
  [X]
 
+## ElwindName
+Elwind[X]
+
+## ElwindDesc
+ [X]
+
+## ArcwindName
+Arcwind[X]
+
+## ArcwindDesc
+ [X]
+
+## GaleName
+Gale[X]
+
+## GaleDesc
+Eff. vs. fliers.[X]
+
+## ThunderName
+Thunder[X]
+
+## ThunderDesc
+ [X]
+
+## ElthunderName
+Elthunder[X]
+
+## ElthunderDesc
+ [X]
+
+## ArcthunderName
+Arcthunder[X]
+
+## ArcthunderDesc
+ [X]
+
+## ConductanceName
+Conductance[X]
+
+## ConductanceDesc
+Eff. vs. armors.[X]
+
+## FireName
+Fire[X]
+
+## FireDesc
+ [X]
+
+## ElfireName
+Elfire[X]
+
+## ElfireDesc
+ [X]
+
+## ArcfireName
+Arcfire[X]
+
+## ArcfireDesc
+ [X]
+
+## BeastblazeName
+Beastblaze[X]
+
+## BeastblazeDesc
+Eff. vs. cavalry.[X]
+
+
 ## SootheName
 Soothe[X]
 
@@ -88,3 +155,30 @@ Light Rune[X]
 ## LightRuneDesc
 Creates a barrier on an adjacent space,[N]
 temporarily blocking movement across it.[X]
+
+## FocusName
+Focus[X]
+
+## FocusDesc
+Esme only. Guarantees hits for 1 turn.[X]
+
+## FocusUseDesc
+Guarantees hits for 1 turn.[X]
+
+## MagebladeName
+Mageblade[X]
+
+## MagebladeDesc
+A magical blade. Uses MAG, hits RES.[X]
+
+## MiniBowName
+Mini Bow[X]
+
+## MiniBowDesc
+A light bow used for counterattacks.[X]
+
+## RedGemDesc
+A rare gem. Sells for 2000 gold.[X]
+
+## ReaverDesc
+Reverses the weapon triangle.[X]

@@ -57,14 +57,14 @@ END_MAIN
 
 Units1:
 UNIT Esme Lord 0x0 Level(1,Ally,False) [3,18] 0x0 0x0 0x0 0x0 [IronSword,Heal,Vulnerary]     NoAI
-UNIT Solomin Grassrunner Esme Level(15, Ally, False) [2,18] 0x0 0x0 0x0 0x0 [SilverSword,IronSword,Vulnerary] NoAI
+UNIT Solomin Grassrunner Esme Level(15, Ally, False) [2,18] 0x0 0x0 0x0 0x0 [SilverSword,IronBow,Vulnerary] NoAI
 UNIT Oldrik LanceRider Esme Level(1, Ally, False) [1,17] 0x0 0x0 0 0 [IronLance,Vulnerary] NoAI
 UNIT Baeric AxeRider Esme Level(5, Ally, False) [1,18] 0x0 0x0 0x0 0x0 [SteelAxe,IronAxe,Vulnerary] NoAI
 UNIT Basren BowRider Esme Level(1, Ally, False) [1,19] 0x0 0x0 0x0 0x0 [IronBow,Vulnerary] NoAI
 UNIT
 
 EsmeGroup:
-UNIT Esme Lord 0x0 Level(1,Ally,False) [0,18] 0x0 0x0 1 REDA3R18 [IronSword,Soothe,Vulnerary]     NoAI
+UNIT Esme Lord 0x0 Level(1,Ally,False) [0,18] 0x0 0x0 1 REDA3R18 [FocusStaff,IronSword,Soothe,Vulnerary]     NoAI
 UNIT
 
 SolominGroup:
@@ -85,7 +85,7 @@ UNIT Chapter1Generics Mercenary 0x0 Level(1,NPC,True) [8,19] 0x0 0x0 1 REDA7R18 
 UNIT
 
 StarbornBossGroup:
-UNIT Chapter1Boss Mercenary 0x0 Level(3,Enemy,False) [5,0] DropItem 0x0 0x0 0x0 [SteelSword] GroupFourAI
+UNIT Chapter1Boss Mercenary 0x0 Level(3,Enemy,False) [5,0] DropItem 0x0 0x0 0x0 [Windblade] GroupFourAI
 UNIT
 
 EnemyUnits1:
